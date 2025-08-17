@@ -1,0 +1,4510 @@
+/* ============================================= */
+/* БАЗОВЫЕ СТИЛИ И ГЛОБАЛЬНЫЕ НАСТРОЙКИ */
+/* ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Плавная прокрутка страницы */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Основные стили тела документа */
+body {
+    background-color: #e1eaf5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ======================== */
+/* Декоративные элементы */
+/* ======================== */
+
+/* Стили для декоративных кругов */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.circle-1 {
+    width: 650px;
+    height: 650px;
+    background: #7EC8E3;
+    top: 13%;
+    left: -1%;
+}
+
+.circle-2 {
+    width: 650px;
+    height: 650px;
+    background: #7EC8E3;
+    bottom: 25%;
+    right: -10%;
+}
+
+/* Адаптация кругов для мобильных устройств */
+@media (max-width: 768px) {
+    .circle-1, .circle-2 {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Стили для декоративных папоротников */
+/* Общие стили для всех папоротников */
+.papor-left, .papor-right,
+.papor-appetizers-left, .papor-appetizers-right {
+    position: absolute;
+    height: 70%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 1s ease;
+    transform-origin: top left;
+}
+
+/* Специфичные стили для папоротников в welcome-section */
+.papor-left {
+    left: -400px;
+    bottom: -550px;
+    transform: translateX(-25%) scale(0.9) rotate(-65deg);
+}
+
+.papor-right {
+    right: -15px;
+    bottom: -800px;
+    transform: translateX(25%) scale(2.5) rotate(115deg);
+    transform-origin: top right;
+}
+
+.papor {
+    width: 1200px;
+}
+
+/* .papor-right {
+    position: absolute;
+    height: 70%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 1s ease;
+    right: -15px;
+    bottom: -800px;
+    transform: translateX(25%) scale(2.5) rotate(115deg);
+    transform-origin: top right;
+} */
+
+.loaded .papor-left,
+.loaded .papor-right {
+    opacity: 0.8;
+    transform: translateX(0) scale(0.9) rotate(-65deg);
+}
+
+.loaded .papor-right {
+    transform: translateX(0) scale(0.9) rotate(115deg);
+}
+
+/* Скрытие папоротников на мобильных устройствах */
+@media (max-width: 1024px) {
+    .papor-left, .papor-right {
+        display: none;
+    }
+}
+
+/* ======================== */
+/* НАВИГАЦИОННОЕ МЕНЮ */
+/* ======================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(225, 238, 245, 0.95);
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Бургер-меню */
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.toggle-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #434343;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #434343;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Основное меню */
+.navbar-menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-link {
+    color: #434343;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #88B1C7;
+}
+
+/* Выпадающее меню */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(225, 238, 245, 0.98);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: #434343;
+    transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: rgba(93, 139, 244, 0.1);
+    color: #5D8BF4;
+}
+
+.dropdown-caret {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+    margin-left: 5px;
+}
+
+.dropdown:hover .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.dropdown-item {
+    background-color: rgba(225, 238, 245, 0.98);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: #434343;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(225, 238, 245, 0.98);
+    color: #5D8BF4;
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Контакты */
+.navbar-contacts {
+    display: flex;
+    align-items: center;
+    color: #434343;
+    font-size: 1.1rem;
+    margin-left: auto;
+}
+
+.navbar-contacts-mobile {
+    display: none;
+}
+
+.contact-icon {
+    color: #4E9EA7;
+    margin-right: 10px;
+}
+
+.contact-numbers {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-number {
+    line-height: 1.4;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+/* Мобильная версия (1100px и меньше) */
+@media (max-width: 1100px) {
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(225, 238, 245, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-item {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+        display: block;
+    }
+    
+    /* Стили для выпадающего меню в мобильной версии */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: none;
+        border-radius: 0;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 0;
+        transition: none;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-link {
+        padding-left: 40px;
+        justify-content: flex-start;
+    }
+    
+    /* Анимация бургер-иконки */
+    .navbar-toggle.active .toggle-line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .navbar-toggle.active .toggle-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar-toggle.active .toggle-line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 992px) {
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(225, 238, 245, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        padding: 12px 20px;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+    
+    .dropdown-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar-contacts {
+        display: none;
+    }
+    
+    .navbar-contacts-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 15px 20px;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        margin-top: 15px;
+    }
+    
+    /* Анимация бургер-меню */
+    .navbar-toggle.active .navbar-toggle-icon:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .navbar-toggle.active .navbar-toggle-icon:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .navbar-toggle.active .navbar-toggle-icon:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-contacts-mobile {
+        padding: 10px 15px;
+    }
+    
+    .contact-item {
+        font-size: 1rem;
+    }
+}
+
+/* ======================== */
+/* Основное содержимое */
+/* ======================== */
+
+.main-content {
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* ======================== */
+/* Секция приветствия */
+/* ======================== */
+
+.welcome-section {  
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restaurant-block {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 800px;
+    opacity: 0;
+    top: -150px;
+    transform: translateY(50px);
+}
+
+.welcome-text {
+    margin-top: 80px;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-name {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-name img {
+    max-width: 100%; /* Ограничение по ширине родительского контейнера */
+    height: auto; /* Сохранение пропорций */
+    max-height: 120px; /* Максимальная высота для больших экранов */
+    width: auto; /* Автоматическая ширина для сохранения пропорций */
+    display: block; /* Устранение лишних отступов */
+    margin: 0 auto; /* Центрирование */
+}
+
+/* Адаптация для разных размеров экранов */
+@media (max-width: 992px) {
+    .restaurant-name img {
+        max-height: 100px; /* Уменьшение для планшетов */
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurant-name img {
+        max-height: 80px; /* Уменьшение для мобильных */
+    }
+}
+
+@media (max-width: 576px) {
+    .restaurant-name img {
+        max-height: 60px; /* Минимальный размер для маленьких экранов */
+    }
+}
+
+.description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Социальные иконки в приветственной секции */
+.welcome-social-icons-wrapper {
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 3;
+    width: 100%;
+}
+
+.social-line {
+    width: 195px;
+    height: 1px;
+    background: #4E9EA7;
+    margin: 0 auto;
+}
+
+.welcome-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.welcome-social-icons a {
+    color: white;
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-social-icons a:hover {
+    color: #5D8BF4;
+    transform: translateY(-5px);
+    text-shadow: 0 5px 15px rgba(93, 139, 244, 0.5);
+}
+
+/* Адаптация секции приветствия */
+@media (max-width: 992px) {
+    .welcome-text {
+        font-size: 1.5rem;
+    }
+    
+    .restaurant-name {
+        font-size: 3rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+    }
+    
+    .welcome-social-icons-wrapper {
+        bottom: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 1.2rem;
+    }
+    
+    .restaurant-name {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+    
+    .welcome-social-icons a {
+        font-size: 1.5rem;
+    }
+    
+    .social-line {
+        width: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-text {
+        font-size: 1rem;
+    }
+    
+    .restaurant-name {
+        font-size: 1.3rem;
+    }
+    
+    .description {
+        font-size: 0.9rem;
+    }
+    
+    .welcome-social-icons-wrapper {
+        bottom: 80px;
+    }
+    
+    .welcome-social-icons a {
+        font-size: 1.2rem;
+    }
+}
+
+/* ======================== */
+/* Секция меню */
+/* ======================== */
+
+.dishes-section {
+    position: relative;
+    padding: 15spx 0;
+}
+
+.dishes-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.dishes-title {
+    font-size: 2rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.dishes-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 12%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+.dishes-title.highlight {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% { color: #434343; }
+    50% { color: #5D8BF4; text-shadow: 0 0 10px rgba(93, 139, 244, 0.5); }
+    100% { color: #434343; }
+}
+
+.dishes-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 10px;
+}
+
+.dishes-rows-wrapper {
+    position: relative;
+    padding-right: 180px;
+}
+
+.full-height-video {
+    position: absolute;
+    right: -180px;
+    top: 45px;
+    bottom: 0;
+    width: 370px;
+    overflow: hidden;
+    z-index: -1;
+    height: 80vh;
+}
+
+.full-height-video video {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.dishes-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    position: relative;
+    align-items: center;
+    padding-right: 80px;
+}
+
+.dishes-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.dishes-row.reverse .dish-side-image {
+    left: -180px;
+    right: auto;
+}
+
+.dish-image-block {
+    width: 48%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.dish-side-image video {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.dish-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dish-image:hover {
+    transform: scale(1.05);
+}
+
+.dish-text-block {
+    width: 45%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dish-name {
+    font-size: 2rem;
+    color: #434343;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.dish-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.dish-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.dish-btn {
+    display: inline-block; /* Чтобы ссылка вела себя как кнопка */
+    text-decoration: none; /* Убираем подчеркивание */
+    text-align: center; /* Центрируем текст */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.order-btn {
+    background-color: #88B1C7;
+    color: white;
+}
+
+.order-btn:hover {
+    background-color: #4E9EA7;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(93, 139, 244, 0.4);
+}
+
+.details-btn {
+    background-color: transparent;
+    border: 2px solid #5D8BF4;
+    color: #5D8BF4;
+}
+
+.details-btn:hover {
+    background-color: rgba(93, 139, 244, 0.1);
+    transform: translateY(-3px);
+}
+
+.dish-side-image {
+    position: absolute;
+    right: -180px;
+    top: 0;
+    height: calc(100% + 80px);
+    width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.dish-side-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Адаптация секции меню */
+@media (max-width: 1200px) {
+    .dishes-rows-wrapper {
+        padding-right: 0;
+    }
+    
+    .full-height-video {
+        display: none;
+    }
+    
+    .dishes-row {
+        padding-right: 0;
+    }
+    
+    .dish-side-image {
+        display: none;
+    }
+    .dishes-title {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    }
+
+    .dishes-title::after {
+        left: 12%;
+        width: 200px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 992px) {
+    .dishes-row {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    
+    .dishes-row.reverse {
+        flex-direction: column;
+    }
+    
+    .dish-image-block, 
+    .dish-text-block {
+        width: 100%;
+    }
+    
+    .dish-image-block {
+        margin-bottom: 20px;
+    }
+    
+    .dish-text-block {
+        padding: 20px;
+    }
+    
+    .dish-name {
+        font-size: 1.8rem;
+    }
+    
+    .dish-description {
+        font-size: 1rem;
+    }
+    .dishes-title {
+        font-size: 1.8rem;
+        padding-bottom: 15px;
+    }
+
+    .dishes-title::after {
+        left: 20%;
+        width: 200px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dishes-title {
+        font-size: 1.5rem;
+    }
+    
+    .dish-name {
+        font-size: 1.5rem;
+    }
+    
+    .dish-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .dish-btn {
+        width: 100%;
+    }
+    .dishes-title {
+        font-size: 1.4rem;
+        padding-bottom: 15px;
+    }
+
+    .dishes-title::after {
+        left: 20%;
+        width: 200px;
+        height: 3px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dishes-title {
+        font-size: 1.3rem;
+        letter-spacing: 3px;
+    }
+    
+    .dish-image-block {
+        height: 250px;
+    }
+    .dishes-title {
+        font-size: 1.3rem;
+        padding-bottom: 15px;
+    }
+
+    .dishes-title::after {
+        left: 50%;
+        width: 200px;
+        height: 3px;
+    }
+}
+
+/* ======================== */
+/* Секция "О ресторане" */
+/* ======================== */
+
+.about-section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e1eaf5;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 40px;
+}
+
+.about-content {
+    display: flex;
+    height: auto;
+    min-height: 80vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text-block {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-image-wrapper {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.about-image-border {
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    bottom: 3px;
+    left: 10px;
+    border: 3px solid #CB5549;
+    border-radius: 25px;
+    z-index: 2;
+}
+
+.about-image {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    object-fit: cover;
+    border-radius: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-title {
+    font-size: 3rem;
+    color: #434343;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #434343;
+    margin-bottom: 20px;
+}
+
+/* Адаптация секции "О ресторане" */
+@media (max-width: 1200px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image-wrapper {
+        width: 100%;
+        height: 400px;
+    }
+    
+    .about-text-block {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 20px;
+    }
+    
+    .about-text-block {
+        padding: 30px;
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-text-block {
+        padding: 20px;
+    }
+    
+    .about-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .about-image-wrapper {
+        height: 300px;
+    }
+}
+
+/* Секция с картой */
+.map-section {
+    padding: 60px 20px 80px;
+    background-color: #e1eaf5;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-map {
+    font-size: 2.5rem;
+    color: #434343;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    left: -33%;
+}
+
+.section-title-map::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 39.2%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+.map-wrapper {
+    display: flex;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.map-container {
+    flex: 2;
+    height: 500px;
+    min-height: 300px;
+}
+
+.map-info {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-card {
+    background-color: rgba(225, 234, 245, 0.7);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #5D8BF4;
+}
+
+.info-card h3 {
+    color: #434343;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.info-card p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+.info-card i {
+    color: #5D8BF4;
+    width: 20px;
+    text-align: center;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 1200px) {
+    .section-title-map {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        margin-left: 15%;
+    }
+    .section-title-map::after {
+        width: 180px;
+        height: 3px;
+    }
+}
+@media (max-width: 992px) {
+    .map-wrapper {
+        flex-direction: column;
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+    
+    .section-title-map {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        margin-left: 15%;
+    }
+    .section-title-map::after {
+        width: 180px;
+        height: 3px;
+       padding-right: 6%;
+    }
+}
+
+@media (max-width: 768px) {
+    .map-section {
+        padding: 50px 15px 70px;
+    }
+    
+    .section-title-map {
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+        margin-left: 60%;
+    }
+    
+    .section-title-map::after {
+        width: 180px;
+        height: 2px;
+        margin-left: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .map-container {
+        height: 300px;
+    }
+    
+    .map-info {
+        padding: 20px;
+    }
+    
+    .info-card {
+        padding: 15px;
+    }
+    
+    .section-title-map {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        margin-left: 65%;
+    }
+    .section-title-map::after {
+        width: 160px;
+        height: 2px;
+        margin-left: 19px;
+    }
+}
+
+/* ======================== */
+/* Футер */
+/* ======================== */
+
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, #4E9EA7 5%, #34595f 85%);
+    color: white;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.footer-waves {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.wave-1 {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23e1eaf5" opacity=".25"/></svg>');
+    animation: wave 15s linear infinite;
+}
+
+.wave-2 {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23e1eaf5" opacity=".5"/></svg>');
+    animation: wave 20s linear infinite reverse;
+}
+
+.wave-3 {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23e1eaf5" opacity=".75"/></svg>');
+    animation: wave 25s linear infinite;
+}
+
+@keyframes wave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.logo-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    height: 75px;
+    margin-bottom: 15px;
+}
+
+.footer-motto {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: white;
+}
+
+.footer-contacts li, 
+.footer-links li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-contacts i, 
+.footer-links i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #e1eaf5;
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e1eaf5;
+    transform: translateY(-3px);
+}
+
+.footer-subscribe {
+    margin-top: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    margin-top: 10px;
+}
+
+.subscribe-form input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background-color: #5D8BF4;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #3a6aee;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}
+
+.footer-bottom i {
+    color: #ff6b6b;
+}
+
+/* Медиа-запрос для футера на 1440x1080 */
+@media (max-width: 1440px) and (max-height: 1080px) {
+    .footer {
+        padding-top: 60px;
+    }
+    
+    .footer-content {
+        max-width: 1100px;
+    }
+    
+    .footer-logo {
+        height: 65px;
+    }
+}
+
+/* Адаптация футера */
+@media (max-width: 992px) {
+    .footer-column {
+        flex: 0 0 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 60px;
+    }
+    
+    .footer-column {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    
+    .logo-column {
+        align-items: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-contacts li, 
+    .footer-links li {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo {
+        height: 60px;
+    }
+    
+    .footer-title {
+        font-size: 1.3rem;
+    }
+    
+    .footer-motto {
+        font-size: 1rem;
+    }
+}
+
+/* ======================== */
+/* Секция "Холодные закуски" */
+/* ======================== */
+
+.cold-appetizers-section {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для папоротников в секции закусок */
+.papor-appetizers-left {
+    position: absolute;
+    left: -20%;
+    top: 125%;
+    bottom: auto;
+    transform: translateY(-50%) translateX(-25%) scale(0.7) rotate(-65deg);
+    opacity: 0.6;
+    z-index: 1;
+    height: 70%;
+}
+
+.papor-appetizers-right {
+    position: absolute;
+    right: -2%;
+    top: 150%;
+    bottom:auto;
+    transform: translateY(-50%) translateX(25%) scale(0.7) rotate(115deg);
+    opacity: 0.6;
+    z-index: 1;
+    height: 70%;
+    transform-origin: top right;
+}
+
+.loaded .papor-left,
+.loaded .papor-right,
+.loaded .papor-appetizers-left,
+.loaded .papor-appetizers-right {
+    opacity: 0.8;
+}
+
+.loaded .papor-left,
+.loaded .papor-appetizers-left {
+    transform: translateY(-50%) translateX(0) scale(0.9) rotate(-65deg);
+}
+
+.loaded .papor-right,
+.loaded .papor-appetizers-right {
+    transform: translateY(-50%) translateX(0) scale(0.9) rotate(115deg);
+}
+
+/* Заголовок секции */
+.section-title-cold-appetizers {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Декоративная линия под заголовком */
+.section-title-cold-appetizers::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+/* Контейнер для карточек */
+.appetizers-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    z-index: 2;
+    width: 100%;
+}
+
+/* Карточка блюда */
+.appetizer-card {
+    width: 525px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.appetizer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение в карточке */
+.appetizer-image {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.appetizer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* Эффект увеличения изображения при наведении */
+.appetizer-card:hover .appetizer-image img {
+    transform: scale(1.05);
+}
+
+/* Текстовая часть карточки */
+.appetizer-name {
+    font-size: 1.8rem;
+    color: #434343;
+    margin: 20px 25px 10px;
+    letter-spacing: 1px;
+}
+
+.appetizer-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 25px 15px;
+    min-height: 60px;
+}
+
+.appetizer-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+    margin: 0 25px 25px;
+}
+
+/* ======================== */
+/* Адаптация для разных экранов */
+/* ======================== */
+
+/* Адаптация папоротников для разных экранов */
+@media (max-width: 1024px) {
+    .papor-left, .papor-right,
+    .papor-appetizers-left, .papor-appetizers-right {
+        display: none;
+    }
+}
+@media (max-width: 1200px) {
+    .papor-appetizers-left {
+        left: -200px;
+        transform: translateY(-50%) scale(0.6) rotate(-65deg);
+    }
+    
+    .papor-appetizers-right {
+        right: -200px;
+        transform: translateY(-50%) scale(0.6) rotate(115deg);
+    }
+}
+
+@media (max-width: 992px) {
+    .papor-appetizers-left {
+        left: -250px;
+        transform: translateY(-50%) scale(0.5) rotate(-65deg);
+    }
+    
+    .papor-appetizers-right {
+        right: -250px;
+        transform: translateY(-50%) scale(0.5) rotate(115deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .papor-appetizers-left,
+    .papor-appetizers-right {
+        display: none;
+    }
+}
+
+/* Для ноутбуков и планшетов в альбомной ориентации */
+@media (max-width: 1200px) {
+    .appetizers-container {
+        gap: 30px;
+    }
+    
+    .appetizer-card {
+        width: 48%;
+        min-width: 400px;
+    }
+    
+    .appetizer-image {
+        height: 400px;
+    }
+}
+
+/* Для планшетов в портретной ориентации */
+@media (max-width: 992px) {
+    .cold-appetizers-section {
+        padding: 60px 20px;
+    }
+    
+    .section-title-cold-appetizers {
+        font-size: 2.2rem;
+    }
+    
+    .appetizer-card {
+        min-width: 350px;
+    }
+    
+    .appetizer-image {
+        height: 350px;
+    }
+    
+    .appetizer-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title-cold-appetizers {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .section-title-cold-appetizers::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .appetizers-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .appetizer-card {
+        width: 100%;
+        max-width: 525px;
+        min-width: unset;
+    }
+    
+    .appetizer-image {
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    
+    .appetizer-name {
+        font-size: 1.5rem;
+    }
+    
+    .appetizer-description {
+        font-size: 1rem;
+        min-height: auto;
+    }
+}
+
+/* Для маленьких мобильных устройств */
+@media (max-width: 576px) {
+    .cold-appetizers-section {
+        padding: 40px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .appetizer-name {
+        margin: 15px 15px 8px;
+        font-size: 1.3rem;
+    }
+    
+    .appetizer-description {
+        margin: 0 15px 10px;
+    }
+    
+    .appetizer-price {
+        margin: 0 15px 15px;
+        font-size: 1.3rem;
+    }
+}
+/* Секция с меню блюд */
+.menu-items-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.menu-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #e1eaf5;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-content {
+    flex: 1;
+}
+
+.item-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.item-name {
+    font-size: 1.5rem;
+    color: #434343;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.item-gram {
+    font-size: 0.9rem;
+    color: #C8AA5B;
+    margin: 0;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+    min-width: 100px;
+    text-align: right;
+}
+/* Стили для фото меню */
+.menu-photo-container {
+    max-width: 1240px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.menu-photo {
+    width: 100%;
+    height: auto;
+    max-height: 624px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-photo:hover {
+    transform: scale(1.02);
+}
+
+/* Адаптация фото меню */
+@media (max-width: 1300px) {
+    .menu-photo-container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-photo {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-photo {
+        max-height: 300px;
+    }
+}
+/* Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    
+    .item-price {
+        margin-top: 10px;
+        text-align: left;
+        min-width: auto;
+    }
+    
+    .item-name {
+        font-size: 1.3rem;
+    }
+    
+    .item-price {
+        font-size: 1.3rem;
+    }
+}
+/* Секция "Салаты" */
+.salads-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Стили для папоротников в секции салатов */
+.papor-salads-left {
+    position: absolute;
+    left: -200px;
+    top: 50px;
+    transform: translateX(-25%) scale(0.7) rotate(-65deg);
+    opacity: 0.6;
+    z-index: 1;
+    height: 70%;
+}
+
+.papor-salads-right {
+    position: absolute;
+    right: -150px;
+    top: 100px;
+    transform: translateX(25%) scale(0.7) rotate(115deg);
+    opacity: 0.6;
+    z-index: 1;
+    height: 70%;
+}
+
+.loaded .papor-salads-left,
+.loaded .papor-salads-right {
+    opacity: 0.6;
+}
+
+/* Контейнер для салатов */
+.salads-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.salad-title-container {
+    max-width: 1240px;
+    margin: 0 auto 40px;
+    padding-left: 30px; /* Увеличенный отступ слева */
+}
+
+/* Карточка салата */
+.salad-card {
+    width: 525px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.salad-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение салата */
+.salad-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.salad-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.salad-card:hover .salad-image img {
+    transform: scale(1.05);
+}
+
+/* Контент салата */
+.salad-content {
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 350px); /* Высота изображения */
+}
+
+.salad-name {
+    font-size: 1.8rem;
+    color: #434343;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.salad-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.salad-gram {
+    color: #C8AA5B;
+    font-weight: 500;
+}
+
+.salad-price-container {
+    margin-top: auto; /* Прижимаем цену к низу */
+    padding-top: 15px;
+    border-top: 1px solid #e1eaf5;
+}
+
+.salad-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 992px) {
+    .salad-title-container {
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .salad-title-container {
+        padding-left: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .salad-title-container {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+/* Адаптация для разных экранов */
+@media (max-width: 1200px) {
+    .salads-container {
+        gap: 30px;
+    }
+    
+    .salad-card {
+        width: 48%;
+        min-width: 400px;
+    }
+    
+    .salad-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .salad-card {
+        min-width: 350px;
+    }
+    
+    .salad-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        text-align: center;
+    }
+    
+    .salads-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .salad-card {
+        width: 100%;
+        max-width: 525px;
+    }
+    
+    .papor-salads-left,
+    .papor-salads-right {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .salads-section {
+        padding: 40px 15px;
+    }
+    
+    .salad-image {
+        height: 250px;
+    }
+    
+    .salad-name {
+        font-size: 1.4rem;
+    }
+    
+    .salad-price {
+        font-size: 1.3rem;
+    }
+}
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .salad-content {
+        height: auto;
+        min-height: 180px;
+    }
+    
+    .salad-price {
+        font-size: 1.3rem;
+    }
+}
+/* Секция "Супы" */
+.soups-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title-container {
+    display: flex;
+    padding: 0 20px 30px;
+}
+
+/* Заголовок в левом углу */
+.section-header {
+    max-width: 1240px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+.section-title-left {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.section-title-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+.menu-items-list {
+    padding: 0 20px;
+}
+
+.item-name {
+    font-size: 1.5rem;
+    color: #434343;
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+.item-gram {
+    font-size: 0.9rem;
+    color: #C8AA5B;
+    margin: 0;
+}
+
+.item-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+    min-width: 100px;
+    text-align: right;
+}
+
+/* Стили для фото меню */
+.menu-photo-container {
+    max-width: 1240px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.menu-photo {
+    width: 100%;
+    height: auto;
+    max-height: 624px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-photo:hover {
+    transform: scale(1.02);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .soups-section {
+        padding: 60px 0;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-title-container {
+        padding: 0 15px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Секция "Горячие блюда" */
+.hot-meals-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa; /* Цвет фона как у всего сайта */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Контейнер заголовка */
+.section-title-container {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    padding-bottom: 25px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    width: 150px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+/* Контейнер для карточек блюд */
+.meals-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+
+/* Карточка блюда */
+.meal-card {
+    width: 525px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение блюда */
+.meal-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.meal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.meal-card:hover .meal-image img {
+    transform: scale(1.05);
+}
+
+/* Контент блюда */
+.meal-content {
+    padding: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 350px);
+}
+
+.meal-name {
+    font-size: 1.8rem;
+    color: #434343;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.meal-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.meal-gram {
+    color: #C8AA5B;
+    font-weight: 500;
+}
+
+.meal-price-container {
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #e1eaf5;
+}
+
+.meal-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+}
+
+/* Адаптация для разных экранов */
+@media (max-width: 1200px) {
+    .meals-container {
+        gap: 30px;
+    }
+    
+    .meal-card {
+        width: 48%;
+        min-width: 400px;
+    }
+    
+    .meal-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .meal-card {
+        min-width: 350px;
+    }
+    
+    .meal-name {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .meals-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .meal-card {
+        width: 100%;
+        max-width: 525px;
+    }
+}
+
+@media (max-width: 576px) {
+    .meal-image {
+        height: 250px;
+    }
+    
+    .meal-name {
+        font-size: 1.4rem;
+    }
+    
+    .meal-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* Секция "Паста" */
+.pasta-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Общие стили для заголовка (уже должны быть в вашем CSS) */
+.section-title2 {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+
+.section-title2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .pasta-section {
+        padding: 40px 15px;
+    }
+    
+    .section-title2 {
+        font-size: 2rem;
+        padding-bottom: 12px;
+    }
+    
+    .section-title2::after {
+        width: 80px;
+        height: 2.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title2 {
+        font-size: 1.8rem;
+        padding-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .section-title2::after {
+        width: 60px;
+        height: 2px;
+    }
+}
+
+/* Секция "Горячие блюда из рыбы" */
+.fish-meals-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Контейнер заголовка */
+.section-title-container {
+    max-width: 1240px;
+    margin: 0 auto 40px;
+    padding-left: 60px;
+}
+
+/* Адаптация для разных экранов */
+@media (max-width: 1200px) {
+    .section-title-container {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-title-container {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fish-meals-section {
+        padding: 60px 15px;
+    }
+    
+    .section-title-container {
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .fish-meals-section {
+        padding: 40px 10px;
+    }
+    
+    .section-title-container {
+        padding-left: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+/* Секция "Мангал" */
+.mangal-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .mangal-section {
+        padding: 40px 15px;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+    
+    .item-price {
+        margin-top: 10px;
+        text-align: left;
+        min-width: auto;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .item-name {
+        font-size: 1.3rem;
+    }
+    
+    .item-price {
+        font-size: 1.3rem;
+    }
+    
+    .menu-photo {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .menu-photo {
+        max-height: 300px;
+    }
+    
+    .menu-item {
+        padding: 15px 0;
+    }
+}
+
+/* Стили для заголовка "Горячие закуски" */
+.section-title-hot {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    margin: 40px 0 30px;
+    padding-bottom: 15px;
+    line-height: 1.2;
+}
+
+.section-title-hot::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .section-title-hot {
+        font-size: 2rem;
+        margin: 30px 0 20px;
+        padding-bottom: 12px;
+    }
+    
+    .section-title-hot::after {
+        width: 80px;
+        height: 2.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title-hot {
+        font-size: 1.8rem;
+        margin: 25px 0 15px;
+        padding-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    
+    .section-title-hot::after {
+        width: 60px;
+        height: 2px;
+    }
+}
+
+/* Секция "Десерты" */
+.desserts-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.dessert-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.dessert-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.dessert-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dessert-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dessert-name {
+    font-size: 1.8rem;
+    color: #434343;
+    margin-bottom: 15px;
+}
+
+.dessert-description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.dessert-price {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    font-weight: 600;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .dessert-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .dessert-image {
+        width: 100%;
+        min-width: auto;
+    }
+    
+    .dessert-content {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .dessert-name {
+        font-size: 1.5rem;
+    }
+    
+    .dessert-price {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .desserts-section {
+        padding: 40px 15px;
+    }
+    
+    .dessert-name {
+        font-size: 1.3rem;
+    }
+    
+    .dessert-description {
+        font-size: 1rem;
+    }
+}
+
+/* ======================== */
+/* Вертикальное меню с иконками */
+/* ======================== */
+
+.vertical-menu {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(211, 229, 241, 0.9);
+    padding: 20px 10px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.vertical-menu:hover {
+    background-color: rgba(225, 234, 245, 0.95);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #434343;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: #5D8BF4;
+    color: white;
+    transform: scale(1.1);
+}
+
+.menu-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 50px;
+    white-space: nowrap;
+    background-color: #434343;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+    left: 55px;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 992px) {
+    .vertical-menu {
+        left: 10px;
+        padding: 15px 8px;
+        gap: 12px;
+        display: none;
+    }
+    
+    .menu-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+    
+    .menu-icon::after {
+        font-size: 0.8rem;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vertical-menu {
+        display: none; /* Скрываем на мобильных */
+    }
+}
+
+/* Секция "Алкогольные коктейли" */
+.cocktails-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.cocktails-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cocktails-content {
+    display: flex;
+    gap: 40px;
+}
+
+.cocktails-list {
+    flex: 2;
+}
+
+.cocktail-photo {
+    flex: 1;
+    position: relative;
+}
+
+.cocktail-image {
+    width: 140%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cocktail-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #e1eaf5;
+}
+
+.cocktail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.cocktail-name {
+    font-size: 1.5rem;
+    color: #434343;
+}
+
+.cocktail-price {
+    font-size: 1.3rem;
+    color: #4E9EA7;
+    font-weight: 600;
+}
+
+.cocktail-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.cocktail-ml {
+    color: #C8AA5B;
+    font-weight: 500;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 992px) {
+    .cocktails-content {
+        flex-direction: column;
+    }
+    
+    .cocktail-photo {
+        order: -1;
+        height: 300px;
+        margin-bottom: 30px;
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cocktails-section {
+        padding: 40px 15px;
+    }
+    
+    .cocktail-name {
+        font-size: 1.3rem;
+    }
+    
+    .cocktail-price {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-title::after {
+        left: 29%;
+    }
+    
+    .cocktail-item {
+        padding: 15px 0;
+    }
+}
+/* Секция "Вина" */
+.wines-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+    margin-top: -150px;
+    padding-top: 40px;
+}
+
+.wines-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wine-category {
+    margin-bottom: 40px;
+}
+
+.wine-category-title {
+    font-size: 1.8rem;
+    color: #434343;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #C8AA5B;
+}
+
+.wine-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px dashed #d1dde9;
+    align-items: flex-start;
+}
+
+.wine-name-container {
+    display: flex;
+    align-items: baseline;
+    width: 60%;
+}
+
+.wine-name {
+    font-size: 1.3rem;
+    color: #434343;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.wine-ml {
+    font-size: 1rem;
+    color: #C8AA5B;
+    font-weight: 500;
+}
+
+.wine-description {
+    width: 60%;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.wine-price {
+    width: 30%;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #4E9EA7;
+    font-weight: 600;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .wines-section {
+        margin-top: -50px; /* Меньший подъем на мобильных */
+        padding-top: 30px;
+    }
+    
+    .wine-category-title {
+        font-size: 1.5rem;
+    }
+    
+    .wine-name {
+        font-size: 1.2rem;
+    }
+    
+    .wine-name-container,
+    .wine-description {
+        width: 100%;
+    }
+    
+    .wine-price {
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .wine-price {
+        font-size: 1rem;
+    }
+}
+/* Секция "Водка" */
+.vodka-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.vodka-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vodka-category {
+    margin-bottom: 40px;
+}
+
+.vodka-category-title {
+    font-size: 1.8rem;
+    color: #434343;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #C8AA5B;
+}
+
+.vodka-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px dashed #d1dde9;
+    align-items: flex-start;
+}
+
+.vodka-name-container {
+    display: flex;
+    align-items: baseline;
+    width: 60%;
+}
+
+.vodka-name {
+    font-size: 1.3rem;
+    color: #434343;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.vodka-ml {
+    font-size: 1rem;
+    color: #C8AA5B;
+    font-weight: 500;
+}
+
+.vodka-description {
+    width: 60%;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.vodka-price {
+    width: 30%;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #4E9EA7;
+    font-weight: 600;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .vodka-section {
+        padding: 40px 15px;
+    }
+    
+    .vodka-category-title {
+        font-size: 1.5rem;
+    }
+    
+    .vodka-name {
+        font-size: 1.2rem;
+    }
+    
+    .vodka-name-container,
+    .vodka-description {
+        width: 100%;
+    }
+    
+    .vodka-price {
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .vodka-price {
+        font-size: 1rem;
+    }
+}
+
+/* ============================================= */
+/* МЕДИА-ЗАПРОСЫ ДЛЯ РАЗРЕШЕНИЯ 1440x1080 */
+/* ============================================= */
+
+@media (max-width: 1440px) and (max-height: 1080px) {
+    /* Навигационное меню */
+    .nav-container {
+        max-width: 1100px;
+    }
+    
+    /* Вертикальное меню */
+    .vertical-menu {
+        left: 15px;
+        padding: 15px 8px;
+    }
+    
+    /* Холодные закуски */
+    .cold-appetizers-section {
+        padding: 30px 15px;
+    }
+    
+    .appetizers-container {
+        gap: 80px;
+    }
+    
+    .appetizer-card {
+        width: 480px;
+    }
+    
+    .appetizer-image {
+        height: 450px;
+    }
+    
+    /* Общие стили для заголовков секций
+    .section-title,
+    .section-title-cold-appetizers,
+    .section-title-left,
+    .section-title2,
+    .section-title-hot {
+        font-size: 2.2rem; */
+    }
+
+
+/* ============================================= */
+/* МЕДИА-ЗАПРОСЫ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    /* Скрываем вертикальное меню на мобильных */
+    .vertical-menu {
+        display: none;
+    }
+    
+    /* Адаптация заголовков */
+    .section-title-cold-appetizers {
+        font-size: 1.8rem;
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    .section-title-cold-appetizers::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* Адаптация карточек */
+    .appetizers-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .appetizer-card {
+        width: 100%;
+        max-width: 525px;
+    }
+}
+
+/* ============================================= */
+/* ДОПОЛНИТЕЛЬНЫЕ МЕДИА-ЗАПРОСЫ ДЛЯ МАЛЕНЬКИХ ЭКРАНОВ */
+/* ============================================= */
+
+@media (max-width: 576px) {
+    .cold-appetizers-section {
+        padding: 40px 15px;
+    }
+    
+    .section-title-cold-appetizers {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+    
+    .appetizer-name {
+        font-size: 1.3rem;
+    }
+    
+    .appetizer-price {
+        font-size: 1.3rem;
+    }
+}
+
+/* ============================================= */
+/* СТИЛИ ДЛЯ КОНТЕЙНЕРА С 12 КАРТОЧКАМИ */
+/* ============================================= */
+
+.cards-container {
+    position: relative; /* Добавляем для корректного z-index */
+    z-index: 3; /* Чтобы карточки были поверх папоротников */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    position: relative;
+    width: 525px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Нумерация карточек */
+.card-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #CB5549;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    color: #434343;
+    margin-bottom: 15px;
+}
+
+.card-features {
+    flex-grow: 1;
+}
+
+.card-features p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.card-features i {
+    margin-right: 10px;
+    color: #4E9EA7;
+    width: 20px;
+    text-align: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.card-price {
+    font-size: 1.3rem;
+    color: #4E9EA7;
+    font-weight: 600;
+}
+
+.book-btn {
+    padding: 12px 25px;
+    background-color: #4E9EA7;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #3a7d85;
+    transform: translateY(-2px);
+}
+
+/* ============================================= */
+/* МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ */
+/* ============================================= */
+
+/* Для экранов до 1200px */
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+/* Для планшетов */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 525px;
+        height: auto;
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .card-features p {
+        font-size: 1rem;
+    }
+    
+    .book-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* ============================================= */
+/* СТИЛИ ДЛЯ ПАПОРОТНИКОВ (СТАТИЧНЫЕ) */
+/* ============================================= */
+
+.papor-left-bes, .papor-right-bes {
+    position: fixed; /* Изменено с absolute на fixed */
+    height: 70%;
+    z-index: -2;
+    opacity: 0.8; /* Увеличена прозрачность */
+    transform-origin: top left;
+    pointer-events: none; /* Чтобы не мешали взаимодействию */
+}
+
+.papor-left-bes {
+    left: -400px;
+    bottom: -550px;
+    z-index: -2;
+    transform: scale(0.9) rotate(-65deg);
+}
+
+.papor-right-bes {
+    position:fixed;
+    right: 0px;
+    top: 125%;
+    height: 70%;
+    z-index: -2;
+    opacity: 0.8;
+    transform: scale(0.9) rotate(115deg);
+    transform-origin: top right;
+    pointer-events: none;
+}
+
+.papor-bes {
+    width: 1200px;
+}
+
+/* Адаптация папоротников для разных экранов */
+@media (max-width: 1440px) {
+    .papor-left-bes {
+        left: -500px;
+        transform: scale(0.7) rotate(-65deg);
+    }
+    
+     .papor-right-bes {
+        right: -200px;
+        transform: scale(0.7) rotate(115deg);
+    }
+}
+
+@media (max-width: 1024px) {
+    .papor-left-bes, .papor-right-bes {
+        display: none; /* Скрываем на планшетах и мобильных */
+    }
+}
+
+.alternating-section {
+            padding: 60px 20px;
+            background-color: #e1eaf5;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .alternating-block {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            gap: 40px;
+        }
+
+        .alternating-block.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .alternating-image {
+            flex: 1;
+            min-width: 300px;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .alternating-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        /* Для видео */
+.alternating-image video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+        .alternating-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .alternating-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .alternating-content h2 {
+            font-size: 2rem;
+            color: #434343;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .alternating-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #5D8BF4;
+        }
+
+        .alternating-content p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .alternating-block {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .alternating-block.reverse {
+                flex-direction: column;
+            }
+
+            .alternating-image {
+                width: 100%;
+                height: 250px;
+            }
+
+            .alternating-content h2 {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* ======================== */
+/* МЕДИА-ЗАПРОСЫ */
+/* ======================== */
+
+/* Большие мониторы (1440px и выше) */
+@media (min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .nav-container {
+    max-width: 1400px;
+  }
+}
+
+/* Ноутбуки (1024px - 1439px) */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  html {
+    font-size: 17px;
+  }
+  
+  .papor-left {
+    left: -500px;
+    transform: scale(0.7) rotate(-65deg);
+  }
+  
+  .papor-right {
+    right: -200px;
+    transform: scale(0.7) rotate(115deg);
+  }
+}
+
+/* Планшеты (768px - 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .papor-left, .papor-right {
+    display: none;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(225, 238, 245, 0.98);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+  }
+  
+  .burger-menu {
+    display: flex;
+  }
+  
+  .restaurant-name {
+    font-size: 2.2rem;
+  }
+}
+
+/* Большие телефоны (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .section {
+    padding: 60px 15px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .restaurant-name {
+    font-size: 1.3rem;
+  }
+  
+  .card {
+    width: 100%;
+  }
+}
+
+/* Малые телефоны (до 575px) */
+@media (max-width: 575px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .section {
+    padding: 40px 10px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .restaurant-name {
+    font-size: 1rem;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footer-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Секция пляжа и бара Бризо */
+.beach-section {
+    padding: 80px 20px;
+    background-color: #e1eaf5;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #434343;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+/* Главная картинка */
+.beach-main-image {
+    margin: 0 auto 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.beach-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.beach-image:hover {
+    transform: scale(1.02);
+}
+
+/* Описание и галерея */
+.beach-description {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.text-block {
+    flex: 2;
+    background: rgba(255,255,255,0.8);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.text-block h3 {
+    font-size: 1.8rem;
+    color: #4E9EA7;
+    margin-bottom: 20px;
+}
+
+.beach-features {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.beach-features li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #434343;
+}
+
+.beach-features i {
+    color: #CB5549;
+    width: 25px;
+    text-align: center;
+}
+
+.gallery-block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Адаптация */
+@media (max-width: 1200px) {
+    .beach-description {
+        flex-direction: column;
+    }
+    
+    .gallery-block {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .gallery-item {
+        width: 48%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .text-block {
+        padding: 20px;
+    }
+    
+    .gallery-block {
+        flex-direction: column;
+    }
+    
+    .gallery-item {
+        width: 100%;
+    }
+    
+    .gallery-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .beach-section {
+        padding: 60px 15px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .text-block h3 {
+        font-size: 1.5rem;
+    }
+    
+    .beach-features li {
+        font-size: 1rem;
+    }
+}
+
+/* Секция информации о пляже */
+.beach-info-section {
+    padding: 80px 20px;
+    background-color: #e1eaf5;
+}
+
+.beach-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Стили для фото блока */
+.beach-photo-wrapper {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 500px;
+}
+
+.beach-main-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.beach-main-photo:hover {
+    transform: scale(1.03);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 30px;
+}
+
+.photo-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.photo-overlay p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Стили для контактного блока */
+.beach-contacts-wrapper {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contacts-title {
+    font-size: 2.2rem;
+    color: #434343;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.contacts-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #4E9EA7;
+}
+
+.contacts-block {
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #4E9EA7;
+    width: 40px;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+.contact-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.contact-value {
+    font-size: 1.2rem;
+    color: #434343;
+    font-weight: 500;
+}
+
+a.contact-value {
+    color: #4E9EA7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.contact-value:hover {
+    color: #CB5549;
+}
+
+/* Социальные кнопки */
+.social-buttons {
+    margin-bottom: 30px;
+}
+
+.social-buttons h3 {
+    font-size: 1.5rem;
+    color: #434343;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.social-link {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-55px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Кнопка карты */
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background-color: #4E9EA7;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.map-link i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.map-link:hover {
+    background-color: #3a7d85;
+    transform: translateY(-3px);
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+    .beach-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .beach-photo-wrapper {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .beach-info-section {
+        padding: 60px 15px;
+    }
+    
+    .photo-overlay {
+        padding: 20px;
+    }
+    
+    .photo-overlay h3 {
+        font-size: 1.8rem;
+    }
+    
+    .contacts-title {
+        font-size: 2rem;
+    }
+    
+    .beach-contacts-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .beach-photo-wrapper {
+        height: 300px;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .contact-icon {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    
+    .map-link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+/* Секция с высоким изображением */
+.tall-image-section {
+    padding: 80px 20px;
+    background-color: #e1eaf5;
+}
+
+.tall-image-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.tall-image-container {
+    position: relative;
+    height: 800px; /* Фиксированная высота 800px */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.tall-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.tall-image:hover {
+    transform: scale(1.03);
+}
+
+.image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 40px;
+}
+
+.image-caption h3 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.image-caption p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.contacts-sidebar {
+    /* Стили для правого блока остаются без изменений */
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: 800px; /* Выравниваем высоту с изображением */
+    overflow-y: auto; /* Добавляем прокрутку если контента много */
+}
+
+/* Адаптация для высокого изображения */
+@media (max-width: 1600px) {
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 700px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 650px;
+    }
+    
+    .image-caption {
+        padding: 30px;
+    }
+    
+    .image-caption h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .tall-image-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 600px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 500px;
+    }
+    
+    .image-caption h3 {
+        font-size: 2rem;
+    }
+    
+    .image-caption p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .tall-image-section {
+        padding: 60px 15px;
+    }
+    
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 400px;
+    }
+    
+    .image-caption {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tall-image-container,
+    .contacts-sidebar {
+        height: 350px;
+    }
+    
+    .image-caption h3 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    .image-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Секция с галереей меню */
+.menu-gallery-section {
+    padding: 80px 20px;
+    background-color: #e1eaf5;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #434343;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.title-divider {
+    width: 100px;
+    height: 3px;
+    background-color: #4E9EA7;
+    margin: 0 auto 20px;
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Галерея из двух фото */
+.menu-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-photo-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 500px;
+    transition: transform 0.3s ease;
+}
+
+.menu-photo-item:hover {
+    transform: translateY(-10px);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-photo-item:hover .gallery-image {
+    transform: scale(1.05);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.photo-overlay h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #CB5549;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #a9443a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(203,85,73,0.3);
+}
+
+/* Адаптация */
+@media (max-width: 1024px) {
+    .menu-gallery {
+        gap: 20px;
+    }
+    
+    .menu-photo-item {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-gallery-section {
+        padding: 60px 15px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .menu-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-photo-item {
+        height: 350px;
+    }
+    
+    .photo-overlay {
+        padding: 20px;
+    }
+    
+    .photo-overlay h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .menu-photo-item {
+        height: 300px;
+    }
+}
