@@ -51,12 +51,16 @@
             <!-- Контакты для мобильной версии -->
             <div class="navbar-contacts-mobile">
                 <div class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
-                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <a href="tel:+79876341411" class="contact-value">
+                        <i class="fas fa-phone contact-icon"></i>
+                        <span class="contact-number">8 (987) 634 14-11</span>
+                    </a> 
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone contact-icon"></i>
+                    <a href="tel:54-41-41" class="contact-value">
+                        <i class="fas fa-phone contact-icon"></i>
                     <span class="contact-number">54-41-41</span>
+                </a>
                 </div>
             </div>
         </div>
@@ -164,7 +168,7 @@
                 
                 <div class="social-buttons">
                     <h3>Мы в соцсетях:</h3>
-                    <div class="social-icons">
+                    <div class="social-icons-brizo">
                         <div class="block-items" style="display: flex; align-items: center; justify-content: center;">
                             <a href="https://t.me/brizo_ul" class="social-link telegram" target="_blank" aria-label="Telegram">
                                 <img src="../../img/tg.png" alt="Telegram" width="55">
@@ -198,33 +202,205 @@
 <!-- Секция "Наше меню" с двумя фото -->
 <section class="menu-gallery-section">
     <div class="container">
-        <!-- Заголовок по центру -->
+    <div class="wines-container">
+        <!-- Заголовок секции -->
         <div class="section-header">
-            <h2 class="section-title">Наше меню</h2>
-            <div class="title-divider"></div>
-            <p class="section-subtitle">Попробуйте лучшие блюда нашей кухни</p>
+            <h2 class="section-title">Меню</h2>
         </div>
 
-        <!-- Галерея из двух фото -->
-        <div class="menu-gallery">
-            <!-- Первое фото -->
-            <div class="menu-photo-item">
-                <img src="../../img/brizo/меню кухни 1.png" alt="Блюда из меню" class="gallery-image">
-                <div class="photo-overlay">
-                    <h3>Меню кухни</h3>
-                    <a href="../mKit/mKitchen.html" class="view-btn">Смотреть меню →</a>
+        <!-- Подкатегория "Игристые вина" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Игристые вина</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Martini Asti Doc</h4>
+                    <span class="wine-ml">750 мл</span>
                 </div>
+                <p class="wine-description">Сладкое</p>
+                <p class="wine-price">3500 &#8381;</p>
             </div>
-
-            <!-- Второе фото -->
-            <div class="menu-photo-item">
-                <img src="../../img/brizo/меню бара 1.png" alt="Напитки из бара" class="gallery-image">
-                <div class="photo-overlay">
-                    <h3>Меню бара</h3>
-                    <a href="../mBAR/mBar.html" class="view-btn">Смотреть меню →</a>
+            
+            <!-- Остальные вина в подкатегории -->
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Fonte Prosseco</h4>
+                    <span class="wine-ml">750 мл</span>
                 </div>
+                <p class="wine-description">Сухое</p>
+                <p class="wine-price">2500 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Абрау Дюрсо</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Брют, белое, п/сл</p>
+                <p class="wine-price">1400 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Шампанское Российское</h4>
+                    <span class="wine-ml">150 мл</span>
+                </div>
+                <!-- <p class="wine-description">Кубань, классическое русское игристое</p> --> 
+                <p class="wine-price">200 &#8381;</p>
             </div>
         </div>
+
+        <!-- Подкатегория "Белые вина" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Белые вина</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Villa Antinori</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Сухое, Италия</p>
+                <p class="wine-price">3500 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Animus Vinho Verde</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">П/сухое, Португалия</p>
+                <p class="wine-price">330 / 1600 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Cielo Freschello</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">П/сладкое, Италия</p>
+                <p class="wine-price">285 / 1400 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Cavanza</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">Сухое, Чили</p>
+                <p class="wine-price">330 / 1600 &#8381;</p>
+            </div>
+        </div>
+        
+         <!-- Подкатегория "Розовые вина" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Розовые вина</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Mediterranee</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Сухое, Франция</p>
+                <p class="wine-price">3500 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Zinfander Blush</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">П/сладкое, США</p>
+                <p class="wine-price">350 / 1700 &#8381;</p>
+            </div>
+
+            <!-- Подкатегория "Красные вина" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Красные вина</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Villa Antinori</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Сухое, Италия</p>
+                <p class="wine-price">3900 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Cavanza Carmenere</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">Сухое, Чили</p>
+                <p class="wine-price">365 / 1800 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Cielo Freschello</h4>
+                    <span class="wine-ml">150 / 750 мл</span>
+                </div>
+                <p class="wine-description">П/сладкое, Италия</p>
+                <p class="wine-price">285 / 1400 &#8381;</p>
+            </div>
+        </div>
+
+            <!-- Подкатегория "Грузинские вина" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Грузинские вина</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Алазанская долина</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Белое, п/сладкое</p>
+                <p class="wine-price">1700 &#8381;</p>
+            </div>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Киндзмараули</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Красное, п/сладкое</p>
+                <p class="wine-price">2300 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Саперави</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Красное, сухое</p>
+                <p class="wine-price">1900 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Цинандали</h4>
+                    <span class="wine-ml">750 мл</span>
+                </div>
+                <p class="wine-description">Белое, сухое</p>
+                <p class="wine-price">1800 &#8381;</p>
+            </div>
+        </div>
+
+        <!-- Подкатегория "Вермут" -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Вермуты</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Martini</h4>
+                    <span class="wine-ml">100 мл</span>
+                </div>
+                <p class="wine-description">Extra dry, bianco, rosato, fiero</p>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+     
+        </div>
+    </div>
     </div>
 </section>
  <!-- Футер -->

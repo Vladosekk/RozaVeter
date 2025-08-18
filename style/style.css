@@ -872,12 +872,12 @@ body {
 }
 
 .order-btn {
-    background-color: #88B1C7;
+    background-color: #CB5549;
     color: white;
 }
 
 .order-btn:hover {
-    background-color: #4E9EA7;
+    background-color: #ad362b;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(93, 139, 244, 0.4);
 }
@@ -1116,6 +1116,8 @@ body {
     color: #434343;
     margin-bottom: 20px;
 }
+
+
 
 /* Адаптация секции "О ресторане" */
 @media (max-width: 1200px) {
@@ -3449,7 +3451,7 @@ body {
 
 .card-features i {
     margin-right: 10px;
-    color: #4E9EA7;
+    color: #CB5549;
     width: 20px;
     text-align: center;
 }
@@ -3463,7 +3465,7 @@ body {
 
 .card-price {
     font-size: 1.3rem;
-    color: #4E9EA7;
+    color: #CB5549;
     font-weight: 600;
 }
 
@@ -4111,9 +4113,8 @@ a.contact-value:hover {
     margin-bottom: 20px;
 }
 
-.social-icons {
+.social-icons-brizo {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 5px;
@@ -4159,11 +4160,24 @@ a.contact-value:hover {
 }
 
 /* Адаптация */
+
+
+@media (max-width: 1200px) {
+    .social-icons-brizo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
 @media (max-width: 1024px) {
     .beach-info-grid {
         grid-template-columns: 1fr;
     }
-    
+    .social-icons-brizo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .beach-photo-wrapper {
         height: 400px;
     }
@@ -4173,7 +4187,11 @@ a.contact-value:hover {
     .beach-info-section {
         padding: 60px 15px;
     }
-    
+    .social-icons-brizo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
     .photo-overlay {
         padding: 20px;
     }
@@ -4195,9 +4213,12 @@ a.contact-value:hover {
     .beach-photo-wrapper {
         height: 300px;
     }
-    
-    .contact-item {
+    .social-icons-brizo {
+        display: flex;
         flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-item {
         align-items: flex-start;
     }
     
