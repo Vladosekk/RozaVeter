@@ -546,7 +546,7 @@ body {
     width: 100%;
     max-width: 800px;
     opacity: 0;
-    top: -150px;
+    top: -25%;
     transform: translateY(50px);
 }
 
@@ -589,11 +589,17 @@ body {
     .restaurant-name img {
         max-height: 80px; /* Уменьшение для мобильных */
     }
+    .content {
+         top: -25%;
+    }
 }
 
 @media (max-width: 576px) {
     .restaurant-name img {
         max-height: 60px; /* Минимальный размер для маленьких экранов */
+    }
+    .content {
+         top: -20%;
     }
 }
 
@@ -610,7 +616,7 @@ body {
 /* Социальные иконки в приветственной секции */
 .welcome-social-icons-wrapper {
     position: absolute;
-    bottom: 150px;
+    bottom: 15%;
     left: 0;
     right: 0;
     display: flex;
@@ -704,7 +710,7 @@ body {
     }
     
     .welcome-social-icons-wrapper {
-        bottom: 80px;
+        bottom: 13%;
     }
     
     .welcome-social-icons a {
@@ -859,9 +865,9 @@ body {
 }
 
 .dish-btn {
-    display: inline-block; /* Чтобы ссылка вела себя как кнопка */
-    text-decoration: none; /* Убираем подчеркивание */
-    text-align: center; /* Центрируем текст */
+    display: inline-block;
+    text-decoration: none; 
+    text-align: center;
     padding: 12px 25px;
     border: none;
     border-radius: 30px;
@@ -1133,6 +1139,12 @@ body {
     .about-text-block {
         padding: 40px;
     }
+     .about-image-wrapper {
+        height: 700px;
+    }
+    .about-image{
+        width: 60%;
+    }
 }
 
 @media (max-width: 992px) {
@@ -1142,6 +1154,18 @@ body {
     
     .about-text p {
         font-size: 1.1rem;
+    }
+
+    .about-image{
+        width: 100%;
+    }
+
+     .about-image-wrapper {
+        height: 700px;
+    }
+
+    .about-image{
+        width: 70%;
     }
 }
 
@@ -1161,6 +1185,14 @@ body {
     .about-text p {
         font-size: 1rem;
     }
+
+    .about-image-wrapper {
+        height: 700px;
+    }
+
+    .about-image{
+        width: 80%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1174,9 +1206,14 @@ body {
     }
     
     .about-image-wrapper {
-        height: 300px;
+        height: 400px;
+    }
+
+    .about-image{
+        width: 100%;
     }
 }
+
 
 /* Секция с картой */
 .map-section {
@@ -4178,6 +4215,50 @@ a.contact-value:hover {
 .map-link:hover {
     background-color: #3a7d85;
     transform: translateY(-3px);
+}
+
+/* Масштабирование картинок */
+
+.thumb {
+  width: 200px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* фоновый затемнённый слой (overlay) */
+.lightbox {
+  position: fixed;
+  inset: 0; 
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* видимая модалка */
+.lightbox.open {
+  display: flex;
+}
+
+/* увеличенное изображение */
+.lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+
+/* кнопка закрыть (необязательно) */
+.close-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 /* Адаптация */

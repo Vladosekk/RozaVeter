@@ -105,18 +105,21 @@
                         <li><i class="fas fa-umbrella-beach"></i> Шезлонги и зонтики</li>
                         <li><i class="fas fa-cocktail"></i> Авторские коктейли</li>
                         <li><i class="fas fa-music"></i> Живая музыка по выходным</li>
-                        <li><i class="fas fa-sun"></i> Закрытая веранда на случай непогоды</li>
+                        <li><i class="fas fa-sun"></i> Закрытое кафе на случай непогоды</li>
                     </ul>
+                    <div class="img-block" style="width: 100%; background-image: url(../../img/brizo/XXXL33.webp); height: 270px; background-size: cover; border-radius: 15px;">
+                      <!-- <img src="../../img/brizo/XXXL.png" alt="" width="700px"> -->
+                    </div>
                 </div>
 
                 <div class="gallery-block">
-                    <div class="gallery-item">
+                    <div class="gallery-item" style="margin-bottom: 20px;">
                         <img src="../../img/brizo/sehzlong.png" alt="Бар Бризо" class="gallery-image">
-                        <p>Бар с панорамным видом на реку</p>
+                        <p style="margin-top: 5px;">Бунгало с видом на реку</p>
                     </div>
                     <div class="gallery-item">
                         <img src="../../img/brizo/scale_1200.jpeg" alt="Коктейли" class="gallery-image">
-                        <p>Фирменные летние коктейли</p>
+                        <p style="margin-top: 5px;">Фирменные летние коктейли</p>
                     </div>
                 </div>
             </div>
@@ -127,13 +130,13 @@
 <section class="tall-image-section">
     <div class="container">
         <div class="tall-image-wrapper">
-            <!-- Блок с фото (теперь высотой 800px) -->
             <div class="tall-image-container">
-                <img src="../../img/brizo/стоимость браслетов 1.png" alt="Панорама пляжа Роза Ветров" class="tall-image">
-                <!-- <div class="image-caption">
-                    <h3>Пляжный комплекс "Роза Ветров"</h3>
-                    <p>Самый живописный пляж Ульяновска с видом на Волгу</p>
-                </div> -->
+                <img src="../../img/brizo/stoimost.jpg" alt="" class="tall-image" id="thumb">
+                <!-- overlay для увеличенной картинки -->
+                <div class="lightbox" id="lightbox">
+                  <span class="close-btn" id="closeBtn">✕</span>
+                  <img src="" alt="Увеличенное" id="largeImg">
+                </div>
             </div>
 
             <!-- Контактная информация (справа) -->
@@ -192,7 +195,7 @@
         </div>
     </div>
 </section>
-<!-- Секция "Наше меню" с двумя фото -->
+<!-- Секция "Наше меню" -->
 <section class="menu-gallery-section">
     <div class="container">
     <div class="wines-container">
@@ -207,7 +210,7 @@
             
             <div class="wine-item">
                 <div class="wine-name-container">
-                    <h4 class="wine-name">Огненная вершина</h4>
+                    <h4 class="wine-name">Огненная вишня</h4>
                     <span class="wine-ml">350 мл</span>
                 </div>
                 <p class="wine-price">370 &#8381;</p>
@@ -259,7 +262,7 @@
                     <h4 class="wine-name">Персиковый Дрип</h4>
                     <span class="wine-ml">350 мл</span>
                 </div>
-                <p class="wine-price">370 &#8381;</p>
+                <p class="wine-price">450 &#8381;</p>
             </div>
 
             <div class="wine-item">
@@ -267,7 +270,7 @@
                     <h4 class="wine-name">Клубничный Рафи</h4>
                     <span class="wine-ml">350 мл</span>
                 </div>
-                <p class="wine-price">370 &#8381;</p>
+                <p class="wine-price">450 &#8381;</p>
             </div>
         </div>
 
@@ -307,7 +310,7 @@
 
             <div class="wine-item">
                 <div class="wine-name-container">
-                    <h4 class="wine-name">Голд Бир Север</h4>
+                    <h4 class="wine-name">Голд Бир светлое</h4>
                     <span class="wine-ml">450 мл</span>
                 </div>
                 <p class="wine-price">200 &#8381;</p>
@@ -342,7 +345,7 @@
                     <h4 class="wine-name">Балтика 7</h4>
                     <span class="wine-ml">450 мл</span>
                 </div>
-                <p class="wine-price">280 &#8381;</p>
+                <p class="wine-price">250 &#8381;</p>
             </div>
 
             <div class="wine-item">
@@ -410,14 +413,6 @@
         <div class="wine-category">
             <h3 class="wine-category-title">Напитки б/a</h3>
             
-            <div class="wine-item">
-                <div class="wine-name-container">
-                    <h4 class="wine-name">Добрый Апельсин</h4>
-                    <span class="wine-ml">500 мл</span>
-                </div>
-                <p class="wine-price">150 &#8381;</p>
-            </div>
-
             <div class="wine-item">
                 <div class="wine-name-container">
                     <h4 class="wine-name">Добрый Апельсин</h4>
@@ -499,13 +494,68 @@
 
             <div class="wine-item">
                 <div class="wine-name-container">
-                    <h4 class="wine-name">Голубая Логуна</h4>
+                    <h4 class="wine-name">Голубая Лагуна</h4>
                     <span class="wine-ml">350 мл</span>
                 </div>
                 <p class="wine-price">330 &#8381;</p>
             </div>
      
         </div>
+
+        <!-- Подкатегория "Лимонады"       -->
+        <div class="wine-category">
+            <h3 class="wine-category-title">Лимонад</h3>
+            
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Ананасовый</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Цитрусовый</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Клубничный</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Эвкалипт-лайм</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Яблоко-смородина</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+
+            <div class="wine-item">
+                <div class="wine-name-container">
+                    <h4 class="wine-name">Арбуз-бузина</h4>
+                    <span class="wine-ml">350 мл</span>
+                </div>
+                <p class="wine-price">350 &#8381;</p>
+            </div>
+     
+        </div>
+
         <!-- Подкатегория "Чаи" -->
         <div class="wine-category">
             <h3 class="wine-category-title">Чай</h3>
@@ -535,7 +585,7 @@
 
             <div class="wine-item">
                 <div class="wine-name-container">
-                    <h4 class="wine-name">Флет Уайт</h4>
+                    <h4 class="wine-name">Флэт Уайт</h4>
                     <span class="wine-ml">200 мл</span>
                 </div>
                 <p class="wine-price">250 &#8381;</p>
@@ -629,7 +679,7 @@
                     <h4 class="wine-name">Мак-Н-Чиз</h4>
                     <span class="wine-ml">275 г</span>
                 </div>
-                 <p class="wine-description">Насыщенная паста на основе сырного соуса с капченой колбаской и сыром мацарелла</p>
+                 <p class="wine-description">Насыщенная паста на основе сырного соуса с копченой колбаской и сыром мацарелла</p>
                 <p class="wine-price">450 &#8381;</p>
             </div>
 
@@ -659,9 +709,9 @@
                     <h4 class="wine-name">Фирменные стрипсы со сливочным соусом</h4>
                        <span class="wine-ml">150 г</span>
                 </div>
-                 <p class="wine-description">Хрустящее куриное филе в панировкес соусом на основе сметаны и свежего огурца</p>
+                 <p class="wine-description">Хрустящее куриное филе в панировке с соусом на основе сметаны и свежего огурца</p>
              
-                <p class="wine-price">225 &#8381;</p>
+                <p class="wine-price">250 &#8381;</p>
                 
             </div>
         </div>
@@ -741,10 +791,10 @@
             <div class="wine-item">
                 <div class="wine-name-container">
                     <h4 class="wine-name">Сет из закусок к напиткам</h4>
-                    <span class="wine-ml">650 г</span>
+                    <span class="wine-ml">255 г</span>
                 </div>
                  <p class="wine-description">Пикантный набор из оливок, начос, сезонных фруктов, мясных и сырных деликатсессов с соусмами</p>
-                <p class="wine-price">255 &#8381;</p>
+                <p class="wine-price">650 &#8381;</p>
             </div>
         </div>
 
@@ -834,5 +884,37 @@
     </main>
         
     <script src="../../script/script.js"></script>
+    <script>
+        // Масштабирование картинок
+
+// элементы
+const thumb = document.getElementById('thumb');
+const lightbox = document.getElementById('lightbox');
+const largeImg = document.getElementById('largeImg');
+const closeBtn = document.getElementById('closeBtn');
+
+// при клике на миниатюру — показываем overlay и ставим тот же src
+thumb.addEventListener('click', () => {
+  largeImg.src = thumb.src; // можно поставить другой src для высокого разрешения
+  lightbox.classList.add('open');
+  document.body.style.overflow = 'hidden'; // запрет прокрутки страницы
+});
+
+// закрыть при клике на overlay вне изображения или на крестик
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+});
+
+// закрыть по Esc
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  largeImg.src = '';
+}
+    </script>
 </body>
 </html>
