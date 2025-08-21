@@ -148,5 +148,3 @@ document.querySelectorAll('.dish-btn').forEach(btn => {
     });
 });
 
-
-
