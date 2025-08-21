@@ -599,7 +599,7 @@ body {
         max-height: 60px; /* Минимальный размер для маленьких экранов */
     }
     .content {
-         top: -20%;
+         top: -25%;
     }
 }
 
@@ -668,7 +668,7 @@ body {
     }
     
     .welcome-social-icons-wrapper {
-        bottom: 100px;
+        bottom: 13%;
     }
 }
 
