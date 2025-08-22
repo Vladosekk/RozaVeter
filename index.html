@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/slider.css">
+    <link rel="stylesheet" href="style/map.css">
+    <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Роза Ветров</title>
 </head>
@@ -34,18 +37,21 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
                 
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle">
-                        Меню <i class="fas fa-chevron-down dropdown-caret"></i>
-                    </a>
-                    <ul class="dropdown-menu" style="list-style: none;">
-                        <li><a href="PAGE/mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i> Меню кухни</a></li>
-                        <li><a href="PAGE/mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню бара</a></li>
-                    </ul>
-                </li>
+    <a href="#" class="nav-link dropdown-toggle">
+        Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+    </a>
+    <ul class="dropdown-menu" style="list-style: none;">
+        <li><a href="PAGE/mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i> Меню кухни</a></li>
+        <li><a href="PAGE/mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню бара</a></li>
+        <li><a href="PAGE/polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+    </ul>
+</li>
                 
                 <li class="nav-item"><a href="PAGE/besed/besedki.html" class="nav-link">Беседки</a></li>
                 <li class="nav-item"><a href="PAGE/vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                <li class="nav-item"><a href="PAGE/interior/interior.html" class="nav-link">Наш Интерьер</a></li>
                 <li class="nav-item"><a href="PAGE/brizo/brizo.html" class="nav-link">Бризо</a></li>
+                
             </ul>
 
             <!-- Контакты для мобильной версии -->
@@ -158,7 +164,7 @@
             </div>
         </section>
 
-        <!-- Секция "О ресторане" -->
+         <!-- Секция "О ресторане" -->
         <section class="about-section" id="about">
             <div class="about-container">
                 <div class="about-content">
@@ -172,12 +178,66 @@
                         </div>
                     </div>
                     
-                    <div class="about-image-wrapper">
-                        <div class="about-image-border"></div>
-                        <img src="img/about.png" alt="Интерьер ресторана" class="about-image">
+                    <!-- Автоматический слайдер -->
+                    <div class="auto-slider">
+                        <div class="slider-track">
+                            <div class="slider-slide">
+                                <img src="img/sliders/slide1.png" alt="Интерьер ресторана">
+                                <div class="slide-overlay"></div>
+                                <div class="slider-content">
+                                    <h3 class="slider-title">Элегантный интерьер</h3>
+                                    <p class="slider-description">Уютная атмосфера в стиле бохо с видом на Волгу</p>
+                                </div>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="img/sliders/slide2.png" alt="Летняя терраса">
+                                <div class="slide-overlay"></div>
+                                <div class="slider-content">
+                                    <h3 class="slider-title">Летняя терраса</h3>
+                                    <p class="slider-description">Наслаждайтесь прекрасным видом на реку в теплые дни</p>
+                                </div>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="img/sliders/slide3.png" alt="Беседки в сосновом бору">
+                                <div class="slide-overlay"></div>
+                                <div class="slider-content">
+                                    <h3 class="slider-title">Беседки в сосновом бору</h3>
+                                    <p class="slider-description">Уединенные места для отдыха в окружении природы</p>
+                                </div>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="img/sliders/slide4.png" alt="Авторская кухня">
+                                <div class="slide-overlay"></div>
+                                <div class="slider-content">
+                                    <h3 class="slider-title">Авторская кухня</h3>
+                                    <p class="slider-description">Блюда, которые удивят даже самых изысканных гурманов</p>
+                                </div>
+                            </div>
+                            <div class="slider-slide">
+                                <img src="img/sliders/slide5.png" alt="Авторская кухня">
+                                <div class="slide-overlay"></div>
+                                <div class="slider-content">
+                                    <h3 class="slider-title">Авторская кухня</h3>
+                                    <p class="slider-description">Блюда, которые удивят даже самых изысканных гурманов</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-progress">
+                            <div class="progress-item active">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
 <section class="map-section" id="contacts">
@@ -228,8 +288,10 @@
                         <li><a href="index.html"><i class="fas fa-anchor"></i> Главная</a></li>
                         <li><a href="PAGE/mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
                         <li><a href="PAGE/mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="PAGE/polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
                         <li><a href="PAGE/besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
                         <li><a href="PAGE/vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li class="nav-item"><a href="PAGE/interior/interior.html">Наш Интерьер</a></li>
                         <li><a href="PAGE/brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
                     </ul>
                 </div>
@@ -253,7 +315,7 @@
             </div>
         </footer>
     </main>
-        
+    <script src="script/slider.js"></script>
     <script src="script/script.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
 <script>
