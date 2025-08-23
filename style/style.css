@@ -591,6 +591,7 @@ body {
 /* ======================== */
 
 .main-content {
+    overflow: hidden;
     width: 100%;
     margin-top: 80px;
 }
@@ -877,6 +878,7 @@ body {
     width: 90%;
     height: 90%;
     object-fit: cover;
+    border-radius: 25px;
 }
 
 .dishes-row {
@@ -4149,7 +4151,7 @@ a.contact-value:hover {
 @media (max-width: 576px) {
     .tall-image-container,
     .contacts-sidebar {
-        height: 350px;
+        height: 480px;
     }
     
     .image-caption h3 {
