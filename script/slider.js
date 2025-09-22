@@ -55,3 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initSlider();
 });
+
+// Обновление индикаторов
+function updateIndicators(currentIndex) {
+    const indicators = document.querySelectorAll('.slider-indicators .progress-item');
+    indicators.forEach((indicator, index) => {
+        if (index === currentIndex) {
+            indicator.classList.add('active');
+        } else {
+            indicator.classList.remove('active');
+        }
+    });
+}
+
+// Добавьте вызов этой функции в вашем основном слайдер-скрипте
+// после каждого переключения слайда

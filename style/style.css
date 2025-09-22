@@ -723,7 +723,7 @@ body {
 .welcome-social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .welcome-social-icons a {
@@ -1185,6 +1185,67 @@ body {
     line-height: 1.8;
     color: #434343;
     margin-bottom: 20px;
+}
+
+/* Стили для реверсивного расположения */
+.about-content.reversed {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content.reversed .auto-slider {
+    flex: 1;
+    order: 1;
+    margin-left: 1.5%;
+}
+
+.about-content.reversed .about-text-block {
+    flex: 1;
+    order: 2;
+}
+
+/* Стили для индикаторов слайдов */
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.progress-item {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.progress-item.active {
+    background-color: #1976d2; /* Синий цвет */
+}
+
+.progress-bar {
+    display: none; /* Скрываем старые прогресс-бары */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .about-content.reversed {
+        flex-direction: column;
+    }
+    
+    .about-content.reversed .auto-slider,
+    .about-content.reversed .about-text-block {
+        order: unset;
+        width: 100%;
+    }
+    
+    .slider-indicators {
+        margin-top: 20px;
+    }
 }
 
 /* Адаптация секции "О ресторане" */
@@ -3252,6 +3313,9 @@ body {
     .card-image {
         height: 200px;
     }
+    .card-price {
+    font-size: 1.2rem;
+    }
 }
 
 /* Для мобильных устройств */
@@ -3266,8 +3330,11 @@ body {
     
     .book-btn {
         padding: 10px 20px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
+    .card-price {   
+    font-size: 1.2rem;
+}
 }
 
 /* ============================================= */
