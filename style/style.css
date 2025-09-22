@@ -3477,14 +3477,29 @@ body {
             }
 
             .alternating-image {
-                width: 100%;
+                max-width: 250px;
                 height: 250px;
+                flex: 0 0 auto;
             }
 
             .alternating-content h2 {
                 font-size: 1.6rem;
             }
         }
+
+        @media (max-width: 768px) and (min-width: 576px) {
+    .alternating-block.reverse .alternating-image {
+        height: 250px !important; /* Фиксированная высота */
+        min-height: 250px;
+        max-height: 250px;
+    }
+    
+    .alternating-block.reverse .alternating-image img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
 
         /* ======================== */
 /* МЕДИА-ЗАПРОСЫ */
@@ -4102,16 +4117,18 @@ a.contact-value:hover {
 
 .tall-image-container {
     position: relative;
-    height: 800px; /* Фиксированная высота 800px */
+    width: 100%;
+    height: auto; /* Убираем фиксированную высоту */
     border-radius: 15px;
-    overflow: hidden;
+    overflow: visible; /* Разрешаем полное отображение */
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
 .tall-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Сохраняем пропорции */
+    object-fit: contain; /* Вместо cover - чтобы все изображение было видно */
+    border-radius: 15px;
     transition: transform 0.7s ease;
 }
 
@@ -4146,8 +4163,8 @@ a.contact-value:hover {
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    height: 800px; /* Выравниваем высоту с изображением */
-    overflow-y: auto; /* Добавляем прокрутку если контента много */
+    height: auto; /* Выравниваем высоту с изображением */
+    overflow-y: visible; /* Добавляем прокрутку если контента много */
 }
 
 /* Адаптация для высокого изображения */
@@ -4176,11 +4193,12 @@ a.contact-value:hover {
 @media (max-width: 1200px) {
     .tall-image-wrapper {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .tall-image-container,
     .contacts-sidebar {
-        height: 600px;
+        height: auto;
         width: 100%;
     }
 }
@@ -4188,7 +4206,7 @@ a.contact-value:hover {
 @media (max-width: 992px) {
     .tall-image-container,
     .contacts-sidebar {
-        height: 500px;
+        height: auto;
     }
     
     .image-caption h3 {
@@ -4207,7 +4225,7 @@ a.contact-value:hover {
     
     .tall-image-container,
     .contacts-sidebar {
-        height: 400px;
+        height: auto;
     }
     
     .image-caption {
@@ -4218,7 +4236,7 @@ a.contact-value:hover {
 @media (max-width: 576px) {
     .tall-image-container,
     .contacts-sidebar {
-        height: 480px;
+        height: auto;
     }
     
     .image-caption h3 {
@@ -4228,6 +4246,9 @@ a.contact-value:hover {
     
     .image-caption p {
         font-size: 1rem;
+    }
+    .tall-image {
+        max-height: none; /* Убираем ограничения */
     }
 }
 
