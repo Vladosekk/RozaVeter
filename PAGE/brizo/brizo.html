@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключение шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/map.css">
+    <link rel="stylesheet" href="../../style/footer.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Бризо</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Логотип -->
+            <a href="../../index.html" class="navbar-logo">
+                <img src="../../img/logo.png" alt="Логотип Роза Ветров">
+            </a>
+
+            <!-- Бургер-меню для мобильных -->
+            <button class="navbar-toggle" aria-label="Меню">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Главная</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="list-style: none;">
+                            <li><a href="../mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
+                                    Меню кухни</a></li>
+                            <li><a href="../mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню
+                                    бара</a></li>
+                            <li><a href="../polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                                    Полуфабрикаты</a></li>
+                            <li><a href="../banket/bank.html" class="dropdown-item"><i
+                                        class="fas fa-wine-glass-alt"></i> Банкетное меню</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="../besed/besedki.html" class="nav-link">Беседки</a></li>
+                    <li class="nav-item"><a href="../vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                    <li class="nav-item"><a href="../interior/interior.html" class="nav-link">Наш Интерьер</a></li>
+                    <li class="nav-item"><a href="brizo.html" class="nav-link">Бризо</a></li>
+                </ul>
+
+                <!-- Контакты для мобильной версии -->
+                <div class="navbar-contacts-mobile">
+                    <div class="contact-item">
+                        <a href="tel:+79876341411" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">8 (987) 634 14-11</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:54-41-41" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">54-41-41</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контакты для десктопной версии -->
+            <div class="navbar-contacts">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-numbers">
+                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <span class="contact-number">54-41-41</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+
+        <!-- Добавьте эту секцию перед футером (перед </main>) -->
+        <section class="beach-section" id="brizo">
+            <div class="container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Пляж и бар «Бризо»</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Основной контент -->
+                <div class="beach-content">
+                    <!-- Главная картинка пляжа -->
+                    <div class="beach-main-image">
+                        <img src="../../img/brizo/баннер.png" alt="Пляж и бар Бризо на берегу Волги"
+                            class="beach-image">
+                    </div>
+
+                    <!-- Описание и дополнительные картинки -->
+                    <div class="beach-description">
+                        <div class="text-block">
+                            <h3>Уникальное место на волжском берегу</h3>
+                            <p>Сочетает в себе бар, бунгало, бассейн и кафе на берегу Волги.
+                                Именно здесь вы сможете классно провести время с семьей, друзьями,
+                                сделать классные фото и провести лучшее лето! Мы предлагаем:</p>
+                            <ul class="beach-features">
+                                <li><i class="fas fa-umbrella-beach"></i> Шезлонги и зонтики</li>
+                                <li><i class="fas fa-cocktail"></i> Авторские коктейли</li>
+                                <li><i class="fas fa-music"></i> Живая музыка по выходным</li>
+                                <li><i class="fas fa-sun"></i> Закрытое кафе на случай непогоды</li>
+                            </ul>
+                            <div class="img-block"
+                                style="width: 100%; background-image: url(../../img/brizo/XXXL33.webp); height: 270px; background-size: cover; border-radius: 15px;">
+                                <!-- <img src="../../img/brizo/XXXL.png" alt="" width="700px"> -->
+                            </div>
+                        </div>
+
+                        <div class="gallery-block">
+                            <div class="gallery-item" style="margin-bottom: 20px;">
+                                <img src="../../img/brizo/sehzlong.png" alt="Бар Бризо" class="gallery-image">
+                                <p style="margin-top: 5px;">Бунгало с видом на реку</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../../img/brizo/scale_1200.jpeg" alt="Коктейли" class="gallery-image">
+                                <p style="margin-top: 5px;">Фирменные летние коктейли</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "Информация о пляже" -->
+        <section class="tall-image-section">
+            <div class="container">
+                <div class="tall-image-wrapper">
+                    <div class="tall-image-container">
+                        <img src="../../img/brizo/stoimost.jpg" alt="" class="tall-image" id="thumb">
+                        <!-- overlay для увеличенной картинки -->
+                        <div class="lightbox" id="lightbox">
+                            <span class="close-btn" id="closeBtn">✕</span>
+                            <img src="" alt="Увеличенное" id="largeImg">
+                        </div>
+                    </div>
+
+                    <!-- Контактная информация (справа) -->
+                    <div class="beach-contacts-wrapper">
+                        <h2 class="contacts-title">Контакты пляжа</h2>
+
+                        <div class="contacts-block">
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt contact-icon"></i>
+                                <div class="contact-text">
+                                    <span class="contact-label">Телефон для бронирования:</span>
+                                    <a href="tel:+79370372222" class="contact-value">8 (937) 037-22-22</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-clock contact-icon"></i>
+                                <div class="contact-text">
+                                    <span class="contact-label">Часы работы:</span>
+                                    <span class="contact-value">Ежедневно с 10:00 до 22:00</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <div class="contact-text">
+                                    <span class="contact-label">Адрес:</span>
+                                    <span class="contact-value">г. Ульяновск, пос. Рыбацкий, Заволжский пляж</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-buttons">
+                            <h3>Мы в соцсетях:</h3>
+                            <div class="social-icons-brizo">
+                                <div class="block-items"
+                                    style="display: flex; align-items: center; justify-content: center;">
+                                    <a href="https://t.me/brizo_ul" class="social-link telegram" target="_blank"
+                                        aria-label="Telegram">
+                                        <img src="../../img/tg.png" alt="Telegram" width="55">
+                                    </a>
+                                    <p style="color: #434343">- Наша страничка в telegram</p>
+                                </div>
+                                <div class="block-items"
+                                    style="display: flex; align-items: center; justify-content: center;">
+                                    <a href="https://vk.com/brizo.beach_ul" class="social-link vk" target="_blank"
+                                        aria-label="VKontakte">
+                                        <img src="../../img/vk.png" alt="VKontakte" width="55">
+                                    </a>
+                                    <p style="color: #434343">- Наша страничка в VKontakte</p>
+                                </div>
+                                <div class="block-items"
+                                    style="display: flex; align-items: center; justify-content: center;">
+                                    <a href="https://www.instagram.com/brizo.beach_ul?igsh=eDlhczEwOW1xMGsw"
+                                        class="social-link vk" target="_blank" aria-label="VKontakte">
+                                        <img src="../../img/inst.png" alt="VKontakte" width="55">
+                                    </a>
+                                    <p style="color: #434343">- Наша страничка в Instagram</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <a href="https://yandex.ru/maps/org/brizo/223361327644/?ll=48.549362%2C54.385504&mode=search&sll=48.549362%2C54.385504&source=serp_navig&text=%D0%B3.%20%D0%A3%D0%BB%D1%8C%D1%8F%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%2C%20%D0%BF%D0%BE%D1%81.%20%D0%A0%D1%8B%D0%B1%D0%B0%D1%86%D0%BA%D0%B8%D0%B9%2C%20%D0%97%D0%B0%D0%B2%D0%BE%D0%BB%D0%B6%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%BB%D1%8F%D0%B6&z=16"
+                            class="map-link">
+                            <i class="fas fa-map-marked-alt"></i> Посмотреть на карте
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "Наше меню" -->
+        <section class="menu-gallery-section">
+            <div class="container">
+                <div class="wines-container">
+                    <!-- Заголовок секции -->
+                    <div class="section-header">
+                        <h2 class="section-title">Бар</h2>
+                    </div>
+
+                    <!-- Подкатегория "Игристые вина" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Авторские коктейли</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Огненная вишня</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <!-- Остальные вина в подкатегории -->
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Лимонная волна</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Джин-Дыня-Мята</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Голубая Лагуна</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Виски Кола</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Гранатовый Взрыв</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">370 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Персиковый Дрип</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">450 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Клубничный Рафи</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">450 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Игристое" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Игристое</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Белое Сухое</h4>
+                                <span class="wine-ml">330 мл</span>
+                            </div>
+                            <p class="wine-price">300 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Пиво" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Пиво <span
+                                style="color: #00000071; font-size: 16px;">баночное*</span> </h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">EFES</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">230 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">KRUSOVICE Светлое</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">280 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Голд Бир светлое</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">200 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Козел тёмный</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">260 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Козел светлый</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">260 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Zatecky GUS</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">240 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Балтика 7</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">250 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Корона</h4>
+                                <span class="wine-ml">330 мл</span>
+                            </div>
+                            <p class="wine-price">450 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Kron BLANCHE</h4>
+                                <span class="wine-ml">450 мл</span>
+                            </div>
+                            <p class="wine-price">300 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Разливное" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Пиво <span
+                                style="color: #00000071; font-size: 16px;">Разливное*</span> </h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Пиво Светлое</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">220 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">KRONE BLANCHE</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">300 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Смузи" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Смузи</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Молочно-Банановый</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Клубнично-Ананасовый</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Напитки Б/A" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Напитки б/a</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Добрый Апельсин</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">150 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Добрый Кола</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">150 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Добрый Лимон-Лайм</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">150 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Энергетик</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-price">300 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Волжанка</h4>
+                                <span class="wine-ml">500 мл</span>
+                            </div>
+                            <p class="wine-description">Газ; б/г</p>
+                            <p class="wine-price">110 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Фреш Апельсиновый</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">480 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Коктейли Б/А" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Коктейли б/a</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Тропический рай</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">330 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Санрайз</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">330 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Мохито</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">330 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Голубая Лагуна</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">330 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Лимонады"       -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Лимонад</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Ананасовый</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Цитрусовый</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Клубничный</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Эвкалипт-лайм</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Яблоко-смородина</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Арбуз-бузина</h4>
+                                <span class="wine-ml">350 мл</span>
+                            </div>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Чаи" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Чай</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Чёрный / Зелёный</h4>
+                                <!-- <span class="wine-ml">350 мл</span> -->
+                            </div>
+                            <p class="wine-description">пакетированный</p>
+                            <p class="wine-price">80 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Кофе" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Кофе</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Капучино</h4>
+                                <span class="wine-ml">200 мл</span>
+                            </div>
+                            <p class="wine-price">180 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Флэт Уайт</h4>
+                                <span class="wine-ml">200 мл</span>
+                            </div>
+                            <p class="wine-price">250 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Эспрессо</h4>
+                                <span class="wine-ml">60 мл</span>
+                            </div>
+                            <p class="wine-price">140 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Латте</h4>
+                                <span class="wine-ml">220 мл</span>
+                            </div>
+                            <p class="wine-price">250 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Американо</h4>
+                                <span class="wine-ml">120 мл</span>
+                            </div>
+                            <p class="wine-price">160 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Сироп в ассортименте</h4>
+                                <span class="wine-ml">40 мл</span>
+                            </div>
+                            <p class="wine-price">80 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция "меню"-->
+        <section class="menu-gallery-section">
+            <div class="container">
+                <div class="wines-container">
+                    <!-- Заголовок секции -->
+                    <div class="section-header">
+                        <h2 class="section-title">Меню</h2>
+                    </div>
+
+                    <!-- Подкатегория "" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Роллы</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Со стрипсами</h4>
+                                <span class="wine-ml">220 г</span>
+                            </div>
+                            <p class="wine-description">Хрустящие стрипсы с соусами, свежими овощами в пшеничной лепёшке
+                            </p>
+                            <p class="wine-price">270 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">С Копченой колбаской и соусом "Биг-Хит"</h4>
+                                <span class="wine-ml">215 г</span>
+                            </div>
+                            <p class="wine-description">Пикантая колбаска из говядины, соус "Биг-хит", свежие овощи в
+                                пшеничной лепёшке</p>
+                            <p class="wine-price">330 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">С креветками и соусом из авокадо</h4>
+                                <span class="wine-ml">220 г</span>
+                            </div>
+                            <p class="wine-description">Обжаренные тигровые креветки с травами, овощами, соус из авокадо
+                                в пшеничной лепёшке</p>
+                            <p class="wine-price">390 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Мак-Н-Чиз" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Мак-Н-Чиз</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Мак-Н-Чиз</h4>
+                                <span class="wine-ml">275 г</span>
+                            </div>
+                            <p class="wine-description">Насыщенная паста на основе сырного соуса с копченой колбаской и
+                                сыром мацарелла</p>
+                            <p class="wine-price">450 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Сендвич" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Сендвич</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">С бифштексом и сладким луком</h4>
+                                <span class="wine-ml">200 г</span>
+                            </div>
+                            <p class="wine-description">Говяжий бифштекс сочной прожарки, с овощами, пикантным соусом
+                                под пшеничным тостовым хлебом</p>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Подкатегория "Стрипсы" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Стрипсы</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Фирменные стрипсы со сливочным соусом</h4>
+                                <span class="wine-ml">150 г</span>
+                            </div>
+                            <p class="wine-description">Хрустящее куриное филе в панировке с соусом на основе сметаны и
+                                свежего огурца</p>
+
+                            <p class="wine-price">250 &#8381;</p>
+
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Десерты" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Десерты</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Чуррос</h4>
+                                <span class="wine-ml">155 г</span>
+                            </div>
+                            <p class="wine-description">Обжаренные испанские палочки из заворного теста, с фирменным
+                                сливочным соусом</p>
+                            <p class="wine-price">270 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Фруктовый стакан</h4>
+                                <span class="wine-ml">350 г</span>
+                            </div>
+                            <p class="wine-description">Сезонные фрукты</p>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Закуски" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Закуски</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Жаренный камамбер</h4>
+                                <span class="wine-ml">150 г</span>
+                            </div>
+                            <p class="wine-description">Обжаренный в панировке сыр камамбер с соусом на основе томлёной
+                                в сиропе вишни</p>
+                            <p class="wine-price">650 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Картофель фри</h4>
+                                <span class="wine-ml">120 г</span>
+                            </div>
+                            <p class="wine-description">Хрустящий фри из молодого картофеля</p>
+                            <p class="wine-price">180 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Батат Фри Кидз</h4>
+                                <span class="wine-ml">120 г</span>
+                            </div>
+                            <p class="wine-description">Хрустящий фри из молодого батата</p>
+                            <p class="wine-price">220 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Магаданские креветки</h4>
+                                <span class="wine-ml">200 г</span>
+                            </div>
+                            <p class="wine-description">Охлаждённые отварные креветки</p>
+                            <p class="wine-price">750 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Начос с соусом из сладких перцев</h4>
+                                <span class="wine-ml">130 г</span>
+                            </div>
+                            <p class="wine-description">Хрустящие мексиканские начос с соусом на основе сладкого
+                                запечённого перца</p>
+                            <p class="wine-price">210 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Сет из закусок к напиткам</h4>
+                                <span class="wine-ml">255 г</span>
+                            </div>
+                            <p class="wine-description">Пикантный набор из оливок, начос, сезонных фруктов, мясных и
+                                сырных деликатсессов с соусмами</p>
+                            <p class="wine-price">650 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Соусы" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Соусы</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Фирменные соусы</h4>
+                                <span class="wine-ml">30 г</span>
+                            </div>
+                            <p class="wine-description">Сладкая шрирача / Вишневый к камамберу / Крем англез к чуррос
+                            </p>
+                            <p class="wine-price">60 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Соусы</h4>
+                                <span class="wine-ml">30 г</span>
+                            </div>
+                            <p class="wine-description">Кисло-Сладкий / Барбекю / Кетчуп / Сырный / Чесночный</p>
+                            <p class="wine-price">80 &#8381;</p>
+                        </div>
+                    </div>
+
+
+                </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+
+            <div class="footer-content">
+                <!-- Колонка с логотипом -->
+                <div class="footer-column logo-column">
+                    <img src="../../img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
+                    <p class="footer-motto">С нами всегда попутный ветер!</p>
+                </div>
+
+                <!-- Колонка с контактами -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
+                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
+                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
+                            12:00 до 00:00</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с навигацией -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html"><i class="fas fa-anchor"></i> Главная</a></li>
+                        <li><a href="../mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
+                        <li><a href="../mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="../polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+                        <li><a href="../banket/bank.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
+                        <li><a href="../besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
+                        <li><a href="../vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li><a href="/PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
+                        <li><a href="brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с соцсетями -->
+                <div class="footer-column social-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="../../img/tg.png"
+                                alt="Telegram" width="55"></a>
+                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                                src="../../img/deliveri1.png" alt="Deliveri" width="55"></a>
+                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
+                            aria-label="Instagram"><img src="../../img/inst.png" alt="Instagram" width="55"></a>
+                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="../../img/vk.png"
+                                alt="VKontakte" width="55"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../../script/script.js"></script>
+    <script>
+        // Масштабирование картинок
+
+        // элементы
+        const thumb = document.getElementById('thumb');
+        const lightbox = document.getElementById('lightbox');
+        const largeImg = document.getElementById('largeImg');
+        const closeBtn = document.getElementById('closeBtn');
+
+        // при клике на миниатюру — показываем overlay и ставим тот же src
+        thumb.addEventListener('click', () => {
+            largeImg.src = thumb.src; // можно поставить другой src для высокого разрешения
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden'; // запрет прокрутки страницы
+        });
+
+        // закрыть при клике на overlay вне изображения или на крестик
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+        });
+
+        // закрыть по Esc
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+            largeImg.src = '';
+        }
+    </script>
+</body>
+
+</html>

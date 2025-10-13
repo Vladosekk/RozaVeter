@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключение шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/footer.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Меню Бара</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Логотип -->
+            <a href="../../index.html" class="navbar-logo">
+                <img src="../../img/logo.png" alt="Логотип Роза Ветров">
+            </a>
+
+            <!-- Бургер-меню для мобильных -->
+            <button class="navbar-toggle" aria-label="Меню">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Главная</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="list-style: none;">
+                            <li><a href="../mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
+                                    Меню кухни</a></li>
+                            <li><a href="mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню бара</a>
+                            </li>
+                            <li><a href="../polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                                    Полуфабрикаты</a></li>
+                            <li><a href="../banket/bank.html" class="dropdown-item"><i
+                                        class="fas fa-wine-glass-alt"></i> Банкетное меню</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="../besed/besedki.html" class="nav-link">Беседки</a></li>
+                    <li class="nav-item"><a href="../vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                    <li class="nav-item"><a href="../interior/interior.html" class="nav-link">Наш Интерьер</a></li>
+                    <li class="nav-item"><a href="../brizo/brizo.html" class="nav-link">Бризо</a></li>
+                </ul>
+
+                <!-- Контакты для мобильной версии -->
+                <div class="navbar-contacts-mobile">
+                    <div class="contact-item">
+                        <a href="tel:+79876341411" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">8 (987) 634 14-11</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:54-41-41" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">54-41-41</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контакты для десктопной версии -->
+            <div class="navbar-contacts">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-numbers">
+                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <span class="contact-number">54-41-41</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+            <!-- Десктопное меню - только иконки -->
+    <div class="vertical-menu">
+        <a href="#cocktails-section" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-glass-martini-alt"></i>
+            </div>
+            <span class="menu-text">Алкогольные Коктейли</span>
+        </a>
+        <a href="#wines-section" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-wine-glass-alt"></i>
+            </div>
+            <span class="menu-text">Вино</span>
+        </a>
+        <a href="#alcohole" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-wine-bottle"></i>
+            </div>
+            <span class="menu-text">Крепкий алкоголь</span>
+        </a>
+        <a href="#beer" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-beer"></i>
+            </div>
+            <span class="menu-text">Лёгкий алкоголь</span>
+        </a>
+        <a href="#juci" class="menu-item">
+            <div class="menu-icon">
+                <i class="fas fa-blender"></i>
+            </div>
+            <span class="menu-text">Напитки б/a</span>
+        </a>
+    </div>
+
+    <!-- Мобильное меню - всегда с подписями -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#cocktails-section" class="mobile-menu-item">
+            <div class="mobile-menu-icon">
+                <i class="fas fa-glass-martini-alt"></i>
+            </div>
+            <span class="mobile-menu-text">Алкогольные Коктейли</span>
+        </a>
+        <a href="#wines-section" class="mobile-menu-item">
+            <div class="mobile-menu-icon">
+                <i class="fas fa-wine-glass-alt"></i>
+            </div>
+            <span class="mobile-menu-text">Вино</span>
+        </a>
+        <a href="#alcohole" class="mobile-menu-item">
+            <div class="mobile-menu-icon">
+                <i class="fas fa-wine-bottle"></i>
+            </div>
+            <span class="mobile-menu-text">Крепкий алкоголь</span>
+        </a>
+        <a href="#beer" class="mobile-menu-item">
+            <div class="mobile-menu-icon">
+                <i class="fas fa-beer"></i>
+            </div>
+            <span class="mobile-menu-text">Лёгкий алкоголь</span>
+        </a>
+        <a href="#juci" class="mobile-menu-item">
+            <div class="mobile-menu-icon">
+                <i class="fas fa-blender"></i>
+            </div>
+            <span class="mobile-menu-text">Напитки б/а</span>
+        </a>
+    </div>
+
+    <main class="main-content">
+        <!-- Секция "Алкогольные коктейли" -->
+        <section class="cocktails-section" id="cocktails-section">
+            <div class="cocktails-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Алкогольные коктейли</h2>
+                </div>
+
+                <div class="cocktails-content">
+                    <!-- Блок с коктейлями -->
+                    <div class="cocktails-list">
+                        <!-- Коктейль 1 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Апероль спритц</h3>
+                                <p class="cocktail-price">540 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                <!-- Белый ром, свежая мята, лайм, сахарный сироп, содовая -->
+                                <span class="cocktail-ml">300 мл</span>
+                            </p>
+                        </div>
+
+                        <!-- Коктейль 2 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Мохито</h3>
+                                <p class="cocktail-price">360 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                <!-- Текила, трипл сек, свежий лаймовый сок, сахарный сироп -->
+                                <span class="cocktail-ml">300 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 3 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Мохито клубничный</h3>
+                                <p class="cocktail-price">360 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                <!-- Белый ром, кокосовый крем, ананасовый сок, сливки -->
+                                <span class="cocktail-ml">300 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 4 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Роза Ветров Сприц</h3>
+                                <p class="cocktail-price">360 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                Мартини экстра драй, шампанское, сиропы, содовая
+                                <span class="cocktail-ml">300 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 5 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Long Island Ice tea</h3>
+                                <p class="cocktail-price">490 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                Ром, водка, джин, текила, кола, сироп сахарный, сок лимона
+                                <span class="cocktail-ml">400 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 6 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Голубые Гаваи</h3>
+                                <p class="cocktail-price">360 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                Ром, блю кюрасао, сок ананасовый, сливки, спрайт, ананас
+                                <span class="cocktail-ml">350 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 7 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Пина Колада</h3>
+                                <p class="cocktail-price">470 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                Ром, кокосовый сироп, сливки, сок ананаса, сливки взбитые, мята
+                                <span class="cocktail-ml">350 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 8 -->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">Cuba Libre</h3>
+                                <p class="cocktail-price">320 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                Ром, лайм, кола
+                                <span class="cocktail-ml">350 мл</span>
+                            </p>
+                        </div>
+                        <!-- Коктейль 9-->
+                        <div class="cocktail-item">
+                            <div class="cocktail-header">
+                                <h3 class="cocktail-name">B-52</h3>
+                                <p class="cocktail-price">330 &#8381;</p>
+                            </div>
+                            <p class="cocktail-description">
+                                <span class="cocktail-ml">45 мл</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Блок с фотографией -->
+                    <div class="cocktail-photo">
+                        <img src="../../img/bar/kokteil.png" alt="Алкогольные коктейли" class="cocktail-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "Вина" -->
+        <section class="wines-section" id="wines-section">
+            <div class="wines-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Вина</h2>
+                </div>
+
+                <!-- Подкатегория "Игристые вина" -->
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Игристые вина</h3>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Martini Asti Doc</h4>
+                            <span class="wine-ml">750 мл</span>
+                        </div>
+                        <p class="wine-description">Сладкое</p>
+                        <p class="wine-price">3500 &#8381;</p>
+                    </div>
+
+                    <!-- Остальные вина в подкатегории -->
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Fonte Prosseco</h4>
+                            <span class="wine-ml">750 мл</span>
+                        </div>
+                        <p class="wine-description">Сухое</p>
+                        <p class="wine-price">2500 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Абрау Дюрсо</h4>
+                            <span class="wine-ml">750 мл</span>
+                        </div>
+                        <p class="wine-description">Брют, белое, п/сл</p>
+                        <p class="wine-price">1400 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Шампанское Российское</h4>
+                            <span class="wine-ml">150 мл</span>
+                        </div>
+                        <!-- <p class="wine-description">Кубань, классическое русское игристое</p> -->
+                        <p class="wine-price">200 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Подкатегория "Белые вина" -->
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Белые вина</h3>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Villa Antinori</h4>
+                            <span class="wine-ml">750 мл</span>
+                        </div>
+                        <p class="wine-description">Сухое, Италия</p>
+                        <p class="wine-price">3500 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Animus Vinho Verde</h4>
+                            <span class="wine-ml">150 / 750 мл</span>
+                        </div>
+                        <p class="wine-description">П/сухое, Португалия</p>
+                        <p class="wine-price">330 / 1600 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Cielo Freschello</h4>
+                            <span class="wine-ml">150 / 750 мл</span>
+                        </div>
+                        <p class="wine-description">П/сладкое, Италия</p>
+                        <p class="wine-price">285 / 1400 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Cavanza</h4>
+                            <span class="wine-ml">150 / 750 мл</span>
+                        </div>
+                        <p class="wine-description">Сухое, Чили</p>
+                        <p class="wine-price">330 / 1600 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Подкатегория "Розовые вина" -->
+                <div class="wine-category">
+                    <h3 class="wine-category-title">Розовые вина</h3>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Mediterranee</h4>
+                            <span class="wine-ml">750 мл</span>
+                        </div>
+                        <p class="wine-description">Сухое, Франция</p>
+                        <p class="wine-price">3500 &#8381;</p>
+                    </div>
+
+                    <div class="wine-item">
+                        <div class="wine-name-container">
+                            <h4 class="wine-name">Zinfander Blush</h4>
+                            <span class="wine-ml">150 / 750 мл</span>
+                        </div>
+                        <p class="wine-description">П/сладкое, США</p>
+                        <p class="wine-price">350 / 1700 &#8381;</p>
+                    </div>
+
+                    <!-- Подкатегория "Красные вина" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Красные вина</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Villa Antinori</h4>
+                                <span class="wine-ml">750 мл</span>
+                            </div>
+                            <p class="wine-description">Сухое, Италия</p>
+                            <p class="wine-price">3900 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Cavanza Carmenere</h4>
+                                <span class="wine-ml">150 / 750 мл</span>
+                            </div>
+                            <p class="wine-description">Сухое, Чили</p>
+                            <p class="wine-price">365 / 1800 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Cielo Freschello</h4>
+                                <span class="wine-ml">150 / 750 мл</span>
+                            </div>
+                            <p class="wine-description">П/сладкое, Италия</p>
+                            <p class="wine-price">285 / 1400 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Грузинские вина" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Грузинские вина</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Алазанская долина</h4>
+                                <span class="wine-ml">750 мл</span>
+                            </div>
+                            <p class="wine-description">Белое, п/сладкое</p>
+                            <p class="wine-price">1700 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Киндзмараули</h4>
+                                <span class="wine-ml">750 мл</span>
+                            </div>
+                            <p class="wine-description">Красное, п/сладкое</p>
+                            <p class="wine-price">2300 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Саперави</h4>
+                                <span class="wine-ml">750 мл</span>
+                            </div>
+                            <p class="wine-description">Красное, сухое</p>
+                            <p class="wine-price">1900 &#8381;</p>
+                        </div>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Цинандали</h4>
+                                <span class="wine-ml">750 мл</span>
+                            </div>
+                            <p class="wine-description">Белое, сухое</p>
+                            <p class="wine-price">1800 &#8381;</p>
+                        </div>
+                    </div>
+
+                    <!-- Подкатегория "Вермут" -->
+                    <div class="wine-category">
+                        <h3 class="wine-category-title">Вермуты</h3>
+
+                        <div class="wine-item">
+                            <div class="wine-name-container">
+                                <h4 class="wine-name">Martini</h4>
+                                <span class="wine-ml">100 мл</span>
+                            </div>
+                            <p class="wine-description">Extra dry, bianco, rosato, fiero</p>
+                            <p class="wine-price">350 &#8381;</p>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <!-- Секция "Водка" -->
+        <section class="vodka-section" id="alcohole">
+            <div class="vodka-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Крепкие напитки</h2>
+                </div>
+
+                <!-- Российская водка -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Водка</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Белуга</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Премиальная водка из алтайской пшеницы</p> -->
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Финляндия</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Тройная фильтрация через серебряные фильтры</p> -->
+                        <p class="vodka-price">280 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Царская</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Классическая русская водка</p> -->
+                        <p class="vodka-price">160 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Нерпа</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">250 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Беленькая</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">130 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Байкал</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">150 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Виски -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Виски</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Dewar’s</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <p class="vodka-description">Великобритания</p>
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Jack Daniel’s</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <p class="vodka-description">США</p>
+                        <p class="vodka-price">450 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Jim Beam</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <p class="vodka-description">США</p>
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">William Lawson’s</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <p class="vodka-description">Россия</p>
+                        <p class="vodka-price">200 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Old Virginia</h4>
+                            <span class="vodka-ml">50 мл</span>
+                        </div>
+                        <p class="vodka-description">Франция</p>
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Коньяк -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Коньяк</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Арарат 3 года</h4>
+                            <span class="vodka-ml">50 / 100 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Освежающий вкус мяты</p> -->
+                        <p class="vodka-price">370 / 740 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Арарат 5 лет</h4>
+                            <span class="vodka-ml">50 / 100 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная польская водка с травой зубровкой</p> -->
+                        <p class="vodka-price">400 / 800 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Старый Кенигсбер</h4>
+                            <span class="vodka-ml">50 / 100 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">260 / 520 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Старейшина</h4>
+                            <span class="vodka-ml">50 / 100 мл</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">260 / 520 &#8381;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Секция "Лёгкие напитки" -->
+        <section class="vodka-section" id="beer">
+            <div class="vodka-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Лёгкие напитки</h2>
+                </div>
+
+                <!-- Пиво -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Пиво</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Krusovice</h4>
+                            <span class="vodka-ml">0,5 л.</span>
+                        </div>
+                        <p class="vodka-description">Разливное, Чехия</p>
+                        <p class="vodka-price">310 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Velkopopovicky kozel</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <p class="vodka-description">Бутылочное, светлое/тёмное</p>
+                        <p class="vodka-price">260 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Hoegaarden</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <p class="vodka-description">Бутылочное</p>
+                        <p class="vodka-price">250 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Stella Artois</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <p class="vodka-description">Б/а</p>
+                        <p class="vodka-price">250 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Витязь</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">180 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Трехсосенское</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">200 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Чешское</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <p class="vodka-description">П/ф</p>
+                        <p class="vodka-price">200 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Немецкое </h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">200 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Krone Blanche</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">250 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Korona Extra</h4>
+                            <span class="vodka-ml">0.33 л.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">350 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Spaten</h4>
+                            <span class="vodka-ml">1 шт.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">310 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Текила -->
+                <div class="vodka-category" style="padding-top: 45px;">
+                    <h3 class="vodka-category-title">Текила</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Olmeca Blanco</h4>
+                            <span class="vodka-ml">50 мл.</span>
+                        </div>
+                        <p class="vodka-description">Мексика</p>
+                        <p class="vodka-price">525 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Olmeca Cold</h4>
+                            <span class="vodka-ml">50 мл.</span>
+                        </div>
+                        <p class="vodka-description">Мексика</p>
+                        <p class="vodka-price">575 &#8381;</p>
+                    </div>
+
+                    <!-- Ром -->
+                    <div class="vodka-category" style="padding-top: 45px;">
+                        <h3 class="vodka-category-title">Ром</h3>
+
+                        <div class="vodka-item">
+                            <div class="vodka-name-container">
+                                <h4 class="vodka-name">Bacardi</h4>
+                                <span class="vodka-ml">50 мл.</span>
+                            </div>
+                            <p class="vodka-description">Италия</p>
+                            <p class="vodka-price">470 &#8381;</p>
+                        </div>
+
+                        <!-- Джин -->
+                        <div class="vodka-category" style="padding-top: 45px;">
+                            <h3 class="vodka-category-title">Джин</h3>
+
+                            <div class="vodka-item">
+                                <div class="vodka-name-container">
+                                    <h4 class="vodka-name">Beefeater</h4>
+                                    <span class="vodka-ml">50 мл.</span>
+                                </div>
+                                <p class="vodka-description">Великобритания</p>
+                                <p class="vodka-price">460 &#8381;</p>
+                            </div>
+
+                            <!-- Ликёры -->
+                            <div class="vodka-category" style="padding-top: 45px;">
+                                <h3 class="vodka-category-title">Ликёры</h3>
+
+                                <div class="vodka-item">
+                                    <div class="vodka-name-container">
+                                        <h4 class="vodka-name">Jagermaister</h4>
+                                        <span class="vodka-ml">50 мл.</span>
+                                    </div>
+
+                                    <p class="vodka-price">350 &#8381;</p>
+                                </div>
+
+                                <!-- Настойки -->
+                                <div class="vodka-category" style="padding-top: 45px;">
+                                    <h3 class="vodka-category-title">Настойки</h3>
+
+                                    <div class="vodka-item">
+                                        <div class="vodka-name-container">
+                                            <h4 class="vodka-name">Лимончело</h4>
+                                            <span class="vodka-ml">50 мл.</span>
+                                        </div>
+
+                                        <p class="vodka-price">180 &#8381;</p>
+                                    </div>
+
+                                    <div class="vodka-item">
+                                        <div class="vodka-name-container">
+                                            <h4 class="vodka-name">Киви</h4>
+                                            <span class="vodka-ml">50 мл.</span>
+                                        </div>
+
+                                        <p class="vodka-price">180 &#8381;</p>
+                                    </div>
+
+                                    <div class="vodka-item">
+                                        <div class="vodka-name-container">
+                                            <h4 class="vodka-name">Клюква</h4>
+                                            <span class="vodka-ml">50 мл.</span>
+                                        </div>
+
+                                        <p class="vodka-price">180 &#8381;</p>
+                                    </div>
+
+                                    <div class="vodka-item">
+                                        <div class="vodka-name-container">
+                                            <h4 class="vodka-name">Сет шотов</h4>
+
+                                        </div>
+                                        <p class="vodka-description">6 шотов по <span class="vodka-ml">50 мл.</span></p>
+                                        <p class="vodka-price">900 &#8381;</p>
+                                    </div>
+                                </div>
+        </section>
+        <!-- Секция "б/а" -->
+        <section class="vodka-section" id="juci">
+            <div class="vodka-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title">Напитки б/a</h2>
+                </div>
+
+                <!-- Напитки б/a -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Соки</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Вода</h4>
+                            <span class="vodka-ml">0,5 л.</span>
+                        </div>
+                        <p class="vodka-description">Газ / негаз</p>
+                        <p class="vodka-price">120 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Кока-Кола</h4>
+                            <span class="vodka-ml">0,33 л.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Тройная фильтрация через серебряные фильтры</p> -->
+                        <p class="vodka-price">250 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Спрайт / Кола</h4>
+                            <span class="vodka-ml">0,5 л.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Классическая русская водка</p> -->
+                        <p class="vodka-price">180 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Сок в ассортименте</h4>
+                            <span class="vodka-ml">1 л.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">290 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Фреш Апельсиновый</h4>
+                            <span class="vodka-ml">0,25 л.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Морс</h4>
+                            <span class="vodka-ml">300 мл. / 1000 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Водка с мягким вкусом</p> -->
+                        <p class="vodka-price">150 / 330 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Коктейли Б/А -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Коктейли Б/a</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Мохито</h4>
+                            <span class="vodka-ml">300 мл.</span>
+                        </div>
+                        <p class="vodka-description">Сироп, вода минеральная, лайм, мята</p>
+                        <p class="vodka-price">190 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Пина Колада</h4>
+                            <span class="vodka-ml">170 мл</span>
+                        </div>
+                        <p class="vodka-description">Сливки, кокосовый сироп, ананасовый сок</p>
+                        <p class="vodka-price">260 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Голубые Гаваи</h4>
+                            <span class="vodka-ml">170 мл</span>
+                        </div>
+                        <p class="vodka-description">Блю кюросао, сок ананасовый, фреш лимона</p>
+                        <p class="vodka-price">190 &#8381;</p>
+                    </div>
+                </div>
+
+                <!-- Лимонады -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Лимонады</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Цитрусовый</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Освежающий вкус мяты</p> -->
+                        <p class="vodka-price">410 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Цитрусовой-лемонграсс</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <p class="vodka-description">Сироп, содовая, спрайт, суперджус</p>
+                        <p class="vodka-price">410 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Банан-Ананас-Лаванда</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <p class="vodka-description">Сироп, содовая, спрайт, суперджус</p>
+                        <p class="vodka-price">410 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Малина-Маракуя</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">450 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Кокосовая Кола</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">400 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Эстрагон</h4>
+                            <span class="vodka-ml">1000 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">390 &#8381;</p>
+                    </div>
+                </div>
+                <!-- Кофе -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Кофе</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Эспрессо</h4>
+                            <span class="vodka-ml">50 мл.</span>
+                        </div>
+                        <p class="vodka-price">150 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Американо</h4>
+                            <span class="vodka-ml">150 мл.</span>
+                        </div>
+                        <p class="vodka-price">160 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Капучино</h4>
+                            <span class="vodka-ml">200 мл. / 300 мл.</span>
+                        </div>
+                        <p class="vodka-description">Класс / Мега</p>
+                        <p class="vodka-price">220 / 300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Латте</h4>
+                            <span class="vodka-ml">300 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">280 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Раф</h4>
+                            <span class="vodka-ml">300 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">260 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Какао</h4>
+                            <span class="vodka-ml">300 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">120 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Сироп</h4>
+                            <span class="vodka-ml">20 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">60 &#8381;</p>
+                    </div>
+                </div>
+                <!-- чай -->
+                <div class="vodka-category">
+                    <h3 class="vodka-category-title">Чай</h3>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Имбирь цитрус</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <p class="vodka-description">Сенча, корень имбиря, сироп, лимон, лемонграсс</p>
+                        <p class="vodka-price">300 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Ягодный</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <p class="vodka-description">Чай кения, вишня, сироп</p>
+                        <p class="vodka-price">330 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Чёрный / Зелёный</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Сироп, содовая, спрайт, суперджус</p> -->
+                        <p class="vodka-price">160 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Облепиховый чай</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">350 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Груша-мята</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">350 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Масала</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <!-- <p class="vodka-description">Традиционная русская настойка</p> -->
+                        <p class="vodka-price">340 &#8381;</p>
+                    </div>
+
+                    <div class="vodka-item">
+                        <div class="vodka-name-container">
+                            <h4 class="vodka-name">Лавандовый</h4>
+                            <span class="vodka-ml">700 мл.</span>
+                        </div>
+                        <p class="vodka-description">Зелёный чай, сироп лаванды, цвет лаванды, цвет ромашки</p>
+                        <p class="vodka-price">340 &#8381;</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+
+            <div class="footer-content">
+                <!-- Колонка с логотипом -->
+                <div class="footer-column logo-column">
+                    <img src="../../img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
+                    <p class="footer-motto">С нами всегда попутный ветер!</p>
+                </div>
+
+                <!-- Колонка с контактами -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
+                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
+                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
+                            12:00 до 00:00</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с навигацией -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html"><i class="fas fa-anchor"></i> Главная</a></li>
+                        <li><a href="../mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
+                        <li><a href="mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="../polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+                        <li><a href="../banket/bank.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
+                        <li><a href="../besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
+                        <li><a href="../vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li><a href="/PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
+                        <li><a href="../brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с соцсетями -->
+                <div class="footer-column social-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="../../img/tg.png"
+                                alt="Telegram" width="55"></a>
+                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                                src="../../img/deliveri1.png" alt="Deliveri" width="55"></a>
+                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
+                            aria-label="Instagram"><img src="../../img/inst.png" alt="Instagram" width="55"></a>
+                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="../../img/vk.png"
+                                alt="VKontakte" width="55"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../../script/script.js"></script>
+</body>
+
+</html>

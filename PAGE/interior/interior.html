@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключение шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../../style/footer.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Наш интерьер</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Логотип -->
+            <a href="../../index.html" class="navbar-logo">
+                <img src="../../img/logo.png" alt="Логотип Роза Ветров">
+            </a>
+
+            <!-- Бургер-меню для мобильных -->
+            <button class="navbar-toggle" aria-label="Меню">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Главная</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="list-style: none;">
+                            <li><a href="../mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
+                                    Меню кухни</a></li>
+                            <li><a href="../mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню
+                                    бара</a></li>
+                            <li><a href="../polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                                    Полуфабрикаты</a></li>
+                            <li><a href="../banket/bank.html" class="dropdown-item"><i
+                                        class="fas fa-wine-glass-alt"></i> Банкетное меню</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="../besed/besedki.html" class="nav-link">Беседки</a></li>
+                    <li class="nav-item"><a href="../vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                    <li class="nav-item"><a href="interior.html" class="nav-link">Наш Интерьер</a></li>
+                    <li class="nav-item"><a href="../brizo/brizo.html" class="nav-link">Бризо</a></li>
+
+                </ul>
+
+                <!-- Контакты для мобильной версии -->
+                <div class="navbar-contacts-mobile">
+                    <div class="contact-item">
+                        <a href="tel:+79876341411" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">8 (987) 634 14-11</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:54-41-41" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">54-41-41</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контакты для десктопной версии -->
+            <div class="navbar-contacts">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-numbers">
+                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <span class="contact-number">54-41-41</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content">
+        <!-- Секция с описанием интерьера -->
+        <section class="interior-section" id="interior">
+            <div class="interior-container">
+                <div class="section-header">
+                    <h2 class="section-title">Наш Интерьер</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Погрузитесь в уникальную атмосферу ресторана "Роза Ветров", где каждый
+                        элемент интерьера создан для вашего комфорта и наслаждения</p>
+                </div>
+        </section>
+
+        <div class="container">
+            <!-- Блок 1 -->
+            <div class="content-block">
+                <div class="slider-sectionn">
+                    <div class="main-slider">
+                        <img id="mainImage1" src="" alt="ресторан">
+                        <button class="slider-nav-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails" id="thumbnails1"></div>
+                </div>
+                <div class="text-section">
+                    <h2 class="block-title">Круглогодичный ресторан (до 70 человек)</h2>
+                    <p class="block-text"> Теплая, уютная атмосфера, камин и изысканное меню из сезонных продуктов.
+                        Идеальное место для романтического ужина, семейного обеда или приема гостей в холодное время
+                        года.</p>
+                </div>
+            </div>
+
+            <!-- Блок 2 -->
+            <div class="content-block">
+                <div class="slider-sectionn">
+                    <div class="main-slider">
+                        <img id="mainImage2" src="" alt="беседки">
+                        <button class="slider-nav-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails" id="thumbnails2"></div>
+                </div>
+                <div class="text-section">
+                    <h2 class="block-title">Летние беседки у реки <br> (от 4 до 30 человек)</h2>
+                    <p class="block-text">Для ценителей активного отдыха на свежем воздухе. Каждая беседка оборудована
+                        мангальной зоной и всем необходимым для приготовления шашлыка. Отдельная детская беседка не даст
+                        скучать самым маленьким гостям.</p>
+                </div>
+            </div>
+
+            <!-- Блок 3 -->
+            <div class="content-block">
+                <div class="slider-sectionn">
+                    <div class="main-slider">
+                        <img id="mainImage3" src="" alt="летняя веранда">
+                        <button class="slider-nav-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails" id="thumbnails3"></div>
+                </div>
+                <div class="text-section">
+                    <h2 class="block-title">Закрытая летняя веранда (до 80 человек)</h2>
+                    <p class="block-text">Пространство, объединяющее комфорт интерьера и красоту природы. Панорамное
+                        остекление позволяет наслаждаться видом на реку и лес в любой летний день.</p>
+                </div>
+            </div>
+
+            <!-- Блок 4 -->
+            <div class="content-block">
+                <div class="slider-sectionn">
+                    <div class="main-slider">
+                        <img id="mainImage4" src="" alt="Белоснежный шатер">
+                        <button class="slider-nav-btn prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slider-nav-btn next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="thumbnails" id="thumbnails4"></div>
+                </div>
+                <div class="text-section">
+                    <h2 class="block-title">Белоснежный шатер <br> (до 120 человек)</h2>
+                    <p class="block-text">Главная площадка для грандиозных событий: свадеб, юбилеев, корпоративных
+                        праздников и фуршетов. Элегантный стиль, панорамные окна с видом на Волгу и современное
+                        концертное оборудование обеспечат незабываемую атмосферу вашему торжеству.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fullscreen Modal -->
+        <div class="fullscreen-modal" id="fullscreenModal">
+            <button class="close-btn" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="modal-nav-btn modal-prev-btn" id="prevModal">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="modal-content">
+                <img id="modalImage" src="" alt="">
+                <div class="slide-counter" id="slideCounter">1 / 5</div>
+            </div>
+            <button class="modal-nav-btn modal-next-btn" id="nextModal">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+
+            <div class="footer-content">
+                <!-- Колонка с логотипом -->
+                <div class="footer-column logo-column">
+                    <img src="../../img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
+                    <p class="footer-motto">С нами всегда попутный ветер!</p>
+                </div>
+
+                <!-- Колонка с контактами -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
+                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
+                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
+                            12:00 до 00:00</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с навигацией -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html"><i class="fas fa-anchor"></i> Главная</a></li>
+                        <li><a href="/PAGE/mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
+                        <li><a href="/PAGE/mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="/PAGE/polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+                        <li><a href="/PAGE/banquet/banquet.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
+                        <li><a href="/PAGE/besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
+                        <li><a href="/PAGE/vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li><a href="/PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
+                        <li><a href="/PAGE/brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с соцсетями -->
+                <div class="footer-column social-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="../../img/tg.png"
+                                alt="Telegram" width="55"></a>
+                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="deliveri1"><img
+                                src="../../img/deliveri1.png" alt="Deliveri" width="55"></a>
+                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
+                            aria-label="Instagram"><img src="../../img/inst.png" alt="Instagram" width="55"></a>
+                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="../../img/vk.png"
+                                alt="VKontakte" width="55"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../../script/script.js"></script>
+    <script>
+        // Данные для каждого слайдера
+        const slidersData = {
+            slider1: {
+                images: [
+                    '../../img/sliders/restoran/1.jpg',
+                    '../../img/sliders/restoran/2.jpg',
+                    '../../img/sliders/restoran/3.jpg',
+                    '../../img/sliders/restoran/4.jpg',
+                    '../../img/sliders/restoran/5.jpg'
+                ]
+            },
+            slider2: {
+                images: [
+                    '../../img/sliders/besedki/1.jpeg',
+                    '../../img/sliders/besedki/2.jpeg',
+                    '../../img/sliders/besedki/3.jpg',
+                    '../../img/sliders/besedki/4.jpeg',
+                    '../../img/sliders/besedki/5.jpeg'
+                ]
+            },
+            slider3: {
+                images: [
+                    '../../img/sliders/veranda/1.jpg',
+                    '../../img/sliders/veranda/2.jpg',
+                    '../../img/sliders/veranda/3.jpg',
+                    '../../img/sliders/veranda/4.jpg',
+                    '../../img/sliders/veranda/5.jpg'
+                ]
+            },
+            slider4: {
+                images: [
+                    '../../img/sliders/shater/1.jpg',
+                    '../../img/sliders/shater/2.jpg',
+                    '../../img/sliders/shater/3.jpg',
+                    '../../img/sliders/shater/4.jpg',
+                    '../../img/sliders/shater/5.jpg'
+                ]
+            }
+        };
+
+        let currentSlider = null;
+        let currentSlide = 0;
+
+        // Инициализация всех слайдеров
+        function initSliders() {
+            Object.keys(slidersData).forEach(sliderId => {
+                const data = slidersData[sliderId];
+                initSlider(sliderId, data);
+            });
+        }
+
+        // Инициализация одного слайдера
+        function initSlider(sliderId, data) {
+            const mainImage = document.getElementById(`mainImage${sliderId.slice(-1)}`);
+            const thumbnails = document.getElementById(`thumbnails${sliderId.slice(-1)}`);
+
+            // ПРОВЕРКА НА СУЩЕСТВОВАНИЕ ЭЛЕМЕНТОВ
+            if (!mainImage || !thumbnails) {
+                console.warn(`Элементы для слайдера ${sliderId} не найдены`);
+                return;
+            }
+
+            const prevBtn = mainImage.parentElement.querySelector('.prev-btn');
+            const nextBtn = mainImage.parentElement.querySelector('.next-btn');
+
+            let currentSlideIndex = 0;
+
+            // Устанавливаем первое изображение
+            updateMainImage();
+
+            // Создаем миниатюры
+            data.images.forEach((image, index) => {
+                const thumbnail = document.createElement('div');
+                thumbnail.className = `thumbnail ${index === 0 ? 'active' : ''}`;
+                thumbnail.addEventListener('click', () => setSlide(index));
+
+                const img = document.createElement('img');
+                img.src = image;
+                img.alt = `Миниатюра ${index + 1}`;
+                img.loading = 'lazy';
+
+                thumbnail.appendChild(img);
+                thumbnails.appendChild(thumbnail);
+            });
+
+            function updateMainImage() {
+                mainImage.src = data.images[currentSlideIndex];
+                updateThumbnails();
+            }
+
+            function updateThumbnails() {
+                const thumbs = thumbnails.querySelectorAll('.thumbnail');
+                thumbs.forEach((thumb, index) => {
+                    thumb.classList.toggle('active', index === currentSlideIndex);
+                });
+            }
+
+            function setSlide(index) {
+                currentSlideIndex = index;
+                updateMainImage();
+            }
+
+            function nextSlide() {
+                currentSlideIndex = (currentSlideIndex + 1) % data.images.length;
+                updateMainImage();
+            }
+
+            function prevSlide() {
+                currentSlideIndex = (currentSlideIndex - 1 + data.images.length) % data.images.length;
+                updateMainImage();
+            }
+
+            function openFullscreen() {
+                currentSlider = sliderId;
+                currentSlide = currentSlideIndex;
+                updateModalImage();
+                fullscreenModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Обработчики событий с проверкой
+            if (mainImage) {
+                mainImage.addEventListener('click', openFullscreen);
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', prevSlide);
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextSlide);
+            }
+        }
+
+        function updateModalImage() {
+            if (currentSlider) {
+                const data = slidersData[currentSlider];
+                modalImage.src = data.images[currentSlide];
+                slideCounter.textContent = `${currentSlide + 1} / ${data.images.length}`;
+            }
+        }
+
+        function nextModalSlide() {
+            if (currentSlider) {
+                const data = slidersData[currentSlider];
+                currentSlide = (currentSlide + 1) % data.images.length;
+                updateModalImage();
+            }
+        }
+
+        function prevModalSlide() {
+            if (currentSlider) {
+                const data = slidersData[currentSlider];
+                currentSlide = (currentSlide - 1 + data.images.length) % data.images.length;
+                updateModalImage();
+            }
+        }
+
+        function closeFullscreen() {
+            fullscreenModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            currentSlider = null;
+        }
+
+        // Инициализация модального окна после загрузки DOM
+        document.addEventListener('DOMContentLoaded', function () {
+            // Получаем элементы модального окна
+            const fullscreenModal = document.getElementById('fullscreenModal');
+            const modalImage = document.getElementById('modalImage');
+            const slideCounter = document.getElementById('slideCounter');
+            const closeModal = document.getElementById('closeModal');
+            const prevModal = document.getElementById('prevModal');
+            const nextModal = document.getElementById('nextModal');
+
+            // ПРОВЕРЯЕМ СУЩЕСТВОВАНИЕ ЭЛЕМЕНТОВ МОДАЛЬНОГО ОКНА
+            if (fullscreenModal && modalImage && slideCounter && closeModal && prevModal && nextModal) {
+                // Обработчики событий для модального окна
+                closeModal.addEventListener('click', closeFullscreen);
+                prevModal.addEventListener('click', prevModalSlide);
+                nextModal.addEventListener('click', nextModalSlide);
+
+                fullscreenModal.addEventListener('click', (e) => {
+                    if (e.target === fullscreenModal) {
+                        closeFullscreen();
+                    }
+                });
+
+                document.addEventListener('keydown', (e) => {
+                    if (fullscreenModal.classList.contains('active')) {
+                        if (e.key === 'Escape') closeFullscreen();
+                        if (e.key === 'ArrowLeft') prevModalSlide();
+                        if (e.key === 'ArrowRight') nextModalSlide();
+                    }
+                });
+
+                // Инициализируем слайдеры
+                initSliders();
+            } else {
+                console.error('Не все элементы модального окна найдены. Проверьте ID элементов в HTML.');
+            }
+        });
+    </script>
+</body>
+
+</html>

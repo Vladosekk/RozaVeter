@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключение шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/footer.css">
+    <link rel="stylesheet" href="../../style/style.css">
+    <title>Банкетное меню</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Логотип -->
+            <a href="../../index.html" class="navbar-logo">
+                <img src="../../img/logo.png" alt="Логотип Роза Ветров">
+            </a>
+
+            <!-- Бургер-меню для мобильных -->
+            <button class="navbar-toggle" aria-label="Меню">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Главная</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="list-style: none;">
+                            <li><a href="../mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
+                                    Меню кухни</a></li>
+                            <li><a href="../mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню
+                                    бара</a></li>
+                            <li><a href="../polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                                    Полуфабрикаты</a></li>
+                            <li><a href="bank.html" class="dropdown-item"><i class="fas fa-wine-glass-alt"></i>
+                                    Банкетное меню</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="../besed/besedki.html" class="nav-link">Беседки</a></li>
+                    <li class="nav-item"><a href="../vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                    <li class="nav-item"><a href="../interior/interior.html" class="nav-link">Наш Интерьер</a></li>
+                    <li class="nav-item"><a href="../brizo/brizo.html" class="nav-link">Бризо</a></li>
+                </ul>
+
+                <!-- Контакты для мобильной версии -->
+                <div class="navbar-contacts-mobile">
+                    <div class="contact-item">
+                        <a href="tel:+79876341411" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">8 (987) 634 14-11</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:54-41-41" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">54-41-41</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контакты для десктопной версии -->
+            <div class="navbar-contacts">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-numbers">
+                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <span class="contact-number">54-41-41</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="lunch-section">
+            <div class="lunch-container">
+                <h2 class="lunch-title">Банкетное меню</h2>
+                <hr class="hr95">
+            </div>
+        </section>
+        <section class="soups-section" id="soups-section">
+            <div class="menu-container">
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title-left">Салаты</h2>
+                </div>
+
+                <!-- Список салатов -->
+                <div class="menu-items-list">
+                    <!-- Салат 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Мясной салат с маринованным красным луком и печёным перцем </h3>
+                            <p class="item-description">Мясной салат из говядины и курицы, с миксом салата, под
+                                сливочной заправкой с печёным перцем</p>
+                            <p class="item-gram">140 г</p>
+                        </div>
+                        <div class="item-price">540 &#8381;</div>
+                    </div>
+                    <!-- Салат 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Салат с индейкой и картофелем конфи</h3>
+                            <p class="item-description">Ветчина индейки с миксом салата и мягким картофелем под
+                                фирменной заправкой</p>
+                            <p class="item-gram">210 г</p>
+                        </div>
+                        <div class="item-price">490 &#8381;</div>
+                    </div>
+                    <!-- Салат 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Салат с копчёной курицей и жареными ананасами</h3>
+                            <p class="item-description">Копченая курица с овощами, миксом салата , с заправкой на основе
+                                домашнего майонеза с жаренными ананасами</p>
+                            <p class="item-gram">175 г</p>
+                        </div>
+                        <div class="item-price">480 &#8381;</div>
+                    </div>
+                    <!-- Салат 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Салат с ростбифом и маринованными грибами</h3>
+                            <p class="item-description">Домашний ростбиф, с миксом салата, домашним соусом и
+                                маринованными сезонными грибамид</p>
+                            <p class="item-gram">135 г</p>
+                        </div>
+                        <div class="item-price">560 &#8381;</div>
+                    </div>
+                    <!-- Салат 5 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Салат с телячьим языком барбекю и овощным соте</h3>
+                            <p class="item-description">С телячьим языком барбекю и овощным соте</p>
+                            <p class="item-gram">280 г</p>
+                        </div>
+                        <div class="item-price">720 &#8381;</div>
+                    </div>
+                </div>
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title-left">Горячие блюда</h2>
+                </div>
+                <!-- Список блюд -->
+                <div class="menu-items-list">
+                    <!-- Блюдо 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Буженина из свинины в горчичном маринаде</h3>
+                            <p class="item-description">Томленая свиная шея в маринаде из домашней горчицы , меда и трав
+                            </p>
+                            <p class="item-gram">280 г</p>
+                        </div>
+                        <div class="item-price">780 &#8381;</div>
+                    </div>
+                    <!-- Блюдо 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Куриная грудка с томатным горячим соусом</h3>
+                            <p class="item-description">Стейк из куриной грудки, с гарниром из сезонных томатов в
+                                сливках и специях</p>
+                            <p class="item-gram">270 г</p>
+                        </div>
+                        <div class="item-price">610 &#8381;</div>
+                    </div>
+                    <!-- Блюдо 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Судак с овощами мерпуа и соусом голландез</h3>
+                            <p class="item-description">Спинка судака,с картофелем, морковью, сельдереем под сливочным
+                                сырным соусом</p>
+                            <p class="item-gram">210 г</p>
+                        </div>
+                        <div class="item-price">790 &#8381;</div>
+                    </div>
+                    <!-- Блюдо 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Утиная ножка конфи с0 сливочным картофелем</h3>
+                            <p class="item-description">Нежная утка конфи, с картофелем на гриле с фирменным соусом</p>
+                            <p class="item-gram">285 г</p>
+                        </div>
+                        <div class="item-price">810 &#8381;</div>
+                    </div>
+                    <!-- Блюдо 5 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Телячьи щечки с картофельным мусом и соус из белых грибов</h3>
+                            <p class="item-description">С картофельным мусом и соусом из белых грибов</p>
+                            <p class="item-gram">300 г</p>
+                        </div>
+                        <div class="item-price">720 &#8381;</div>
+                    </div>
+                </div>
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title-left">Горячие закуски</h2>
+                </div>
+                <!-- Список блюд -->
+                <div class="menu-items-list">
+                    <!-- Блюдо 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Валован с лососем и шпинатом</h3>
+                            <p class="item-description">Хрустящий корж из слоеного теста, с начинкой из лосося,томленый
+                                в сливочном соусе со шпинатом и томатами</p>
+                            <p class="item-gram">212 г</p>
+                        </div>
+                        <div class="item-price">520 &#8381;</div>
+                    </div>
+                    <!-- Блюдо 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Томленый язык с печеным баклажаном и сырным соусом</h3>
+                            <p class="item-description">Запеченый говяжий язык, на подушке из печеного баклажана, под
+                                сырным соусом</p>
+                            <p class="item-gram">300 г</p>
+                        </div>
+                        <div class="item-price">690 &#8381;</div>
+                    </div>
+                </div>
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title-left">Горячие закуски</h2>
+                </div>
+                <!-- Список гарниров -->
+                <div class="menu-items-list">
+                    <!-- Гарнир 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Картофельные дольки</h3>
+                            <p class="item-gram">150 г</p>
+                        </div>
+                        <div class="item-price">200 &#8381;</div>
+                    </div>
+                    <!-- Гарнир 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Картофель фри</h3>
+                            <p class="item-gram">150 г</p>
+                        </div>
+                        <div class="item-price">200 &#8381;</div>
+                    </div>
+                    <!-- Гарнир 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Овощи гриль</h3>
+                            <p class="item-gram">200 г</p>
+                        </div>
+                        <div class="item-price">440 &#8381;</div>
+                    </div>
+                    <!-- Гарнир 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Шампиньоны гриль</h3>
+                            <p class="item-gram">150 г</p>
+                        </div>
+                        <div class="item-price">290 &#8381;</div>
+                    </div>
+                </div>
+                <!-- Заголовок секции -->
+                <div class="section-header">
+                    <h2 class="section-title-left">Холодные закуски</h2>
+                </div>
+
+                <!-- Список салатов -->
+                <div class="menu-items-list">
+                    <!-- Закуска 1 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Мясная доска</h3>
+                            <p class="item-description">Мясной салат из говядины и курицы, с миксом салата, под
+                                сливочной заправкой с печёным перцем</p>
+                            <p class="item-gram">200 г</p>
+                        </div>
+                        <div class="item-price">760 &#8381;</div>
+                    </div>
+                    <!-- Закуска 2 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Сырная доска</h3>
+                            <p class="item-description">Сыр с вялеными томатами, пармезан, маасдам, мёд</p>
+                            <p class="item-gram">240 г</p>
+                        </div>
+                        <div class="item-price">760 &#8381;</div>
+                    </div>
+                    <!-- Закуска 3 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Овощная доска</h3>
+                            <p class="item-description">Огурцы, томат, болгарский перец, редис, зелень</p>
+                            <p class="item-gram">400 г</p>
+                        </div>
+                        <div class="item-price">550 &#8381;</div>
+                    </div>
+                    <!-- Закуска 4 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Фруктовая доска</h3>
+                            <p class="item-description">Сезонные фрукты</p>
+                            <p class="item-gram">900 г</p>
+                        </div>
+                        <div class="item-price">920 &#8381;</div>
+                    </div>
+                    <!-- Закуска 5 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Рулетики из баклажанов</h3>
+                            <p class="item-description">Баклажан, сливочный сыр</p>
+                            <p class="item-gram">230 г</p>
+                        </div>
+                        <div class="item-price">540 &#8381;</div>
+                    </div>
+                    <!-- Закуска 6 -->
+                    <div class="menu-item">
+                        <div class="menu-item-content">
+                            <h3 class="item-name">Рулетики из лосося</h3>
+                            <p class="item-description">Лосось, сливочный сыр</p>
+                            <p class="item-gram">130 г</p>
+                        </div>
+                        <div class="item-price">890 &#8381;</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+
+            <div class="footer-content">
+                <!-- Колонка с логотипом -->
+                <div class="footer-column logo-column">
+                    <img src="../../img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
+                    <p class="footer-motto">С нами всегда попутный ветер!</p>
+                </div>
+
+                <!-- Колонка с контактами -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
+                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
+                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
+                            12:00 до 00:00</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с навигацией -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html"><i class="fas fa-anchor"></i> Главная</a></li>
+                        <li><a href="../mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
+                        <li><a href="../mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="../polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+                        <li><a href="banquet.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
+                        <li><a href="../besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
+                        <li><a href="../vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li><a href="/PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
+                        <li><a href="../brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с соцсетями -->
+                <div class="footer-column social-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="../../img/tg.png"
+                                alt="Telegram" width="55"></a>
+                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                                src="../../img/deliveri1.png" alt="Deliveri" width="55"></a>
+                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
+                            aria-label="Instagram"><img src="../../img/inst.png" alt="Instagram" width="55"></a>
+                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="../../img/vk.png"
+                                alt="VKontakte" width="55"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
+            </div>
+        </footer>
+    </main>
+    <script src="../../script/script.js"></script>
+</body>
+
+</html>

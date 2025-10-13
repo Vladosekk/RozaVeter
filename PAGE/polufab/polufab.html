@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключение шрифта Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/footer.css">
+    <title>Полуфабрикаты</title>
+</head>
+
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Логотип -->
+            <a href="../../index.html" class="navbar-logo">
+                <img src="../../img/logo.png" alt="Логотип Роза Ветров">
+            </a>
+
+            <!-- Бургер-меню для мобильных -->
+            <button class="navbar-toggle" aria-label="Меню">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </button>
+
+            <!-- Основное меню -->
+            <div class="navbar-menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">Главная</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
+                        </a>
+                        <ul class="dropdown-menu" style="list-style: none;">
+                            <li><a href="../mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
+                                    Меню кухни</a></li>
+                            <li><a href="../mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню
+                                    бара</a></li>
+                            <li><a href="polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                                    Полуфабрикаты</a></li>
+                            <li><a href="../banket/bank.html" class="dropdown-item"><i
+                                        class="fas fa-wine-glass-alt"></i> Банкетное меню</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a href="../besed/besedki.html" class="nav-link">Беседки</a></li>
+                    <li class="nav-item"><a href="../vozm/ourt.html" class="nav-link">Наши возможности</a></li>
+                    <li class="nav-item"><a href="../interior/interior.html" class="nav-link">Наш Интерьер</a></li>
+                    <li class="nav-item"><a href="../brizo/brizo.html" class="nav-link">Бризо</a></li>
+                </ul>
+
+                <!-- Контакты для мобильной версии -->
+                <div class="navbar-contacts-mobile">
+                    <div class="contact-item">
+                        <a href="tel:+79876341411" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">8 (987) 634 14-11</span>
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="tel:54-41-41" class="contact-value">
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span class="contact-number">54-41-41</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контакты для десктопной версии -->
+            <div class="navbar-contacts">
+                <i class="fas fa-phone contact-icon"></i>
+                <div class="contact-numbers">
+                    <span class="contact-number">8 (987) 634 14-11</span>
+                    <span class="contact-number">54-41-41</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Секция полуфабрикатов -->
+        <div class="semi-finished-section">
+            <div class="semi-finished-container">
+                <!-- Заголовок страницы -->
+                <div class="page-header">
+                    <h1 class="page-title">Полуфабрикаты</h1>
+                    <p class="page-subtitle">Свежие и качественные полуфабрикаты собственного производства. Идеальное
+                        решение для быстрого и вкусного ужина!</p>
+                </div>
+
+                <!-- Блок 1: Картинка слева, текст справа -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/sirniki.jpeg" alt="Сырники твороженые">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Сырники твороженые</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Творог 9%</li>
+                            <li><i class="fas fa-check"></i> Мука Пшеничная в/с</li>
+                            <li><i class="fas fa-check"></i> Яйцо куриное</li>
+                            <li><i class="fas fa-check"></i> Сахар-песок</li>
+                            <li><i class="fas fa-check"></i> Ванилин</li>
+                            <li><i class="fas fa-check"></i> Соль</li>
+                        </ul>
+                        <div class="product-price">260 ₽ / 0,5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 2: Картинка справа, текст слева -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/blini.png" alt="Блинчики">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Блинчики</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Блинное тесто</li>
+                            <li><i class="fas fa-check"></i> Мясо</li>
+                            <li><i class="fas fa-check"></i> шампиньоны</li>
+                            <li><i class="fas fa-check"></i> Лук репчатый</li>
+                            <li><i class="fas fa-check"></i> Соль / специи</li>
+                        </ul>
+                        <p>С мясом - <span style="color: #4E9EA7;"><b>310 ₽</b></span> </p>
+                        <p>С курицей и грибами - <span style="color: #4E9EA7;"><b>260 ₽</b></span> </p>
+                        <div class="product-price"> 0,5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 3: Картинка слева, текст справа -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/kotleti.jpeg" alt="Котлеты домашние">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Котлеты домашние</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Говядина</li>
+                            <li><i class="fas fa-check"></i> Свинина</li>
+                            <li><i class="fas fa-check"></i> Молоко</li>
+                            <li><i class="fas fa-check"></i> Лук репчатый</li>
+                            <li><i class="fas fa-check"></i> Яйцо куриное</li>
+                            <li><i class="fas fa-check"></i> Соль / перец</li>
+                        </ul>
+                        <p>Из говядины и свинины - <span style="color: #4E9EA7;"><b>370 ₽</b></span> </p>
+                        <p>Из говядины - <span style="color: #4E9EA7;"><b>450 ₽</b></span> </p>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 4: Картинка справа, текст слева -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/kotleti1.jpeg" alt="Котлеты куринные">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Куринные котлеты</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Куриное филе</li>
+                            <li><i class="fas fa-check"></i> Молоко</li>
+                            <li><i class="fas fa-check"></i> Хлеб пшеничнывй</li>
+                            <li><i class="fas fa-check"></i> Лук</li>
+                            <li><i class="fas fa-check"></i> Яйцо куринное</li>
+                            <li><i class="fas fa-check"></i> Соль / перец</li>
+                        </ul>
+                        <div class="product-price">340 ₽ / 0.5 кг</div>
+                    </div>
+                </div>
+
+                <!-- Блок 5: Картинка слева, текст справа -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/blini1.jpeg" alt="Блинчики">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Блинчики</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+
+                        <p>С творогом - <span style="color: #4E9EA7;"><b>200 ₽</b></span> </p>
+                        <p>С клубникой и творогом - <span style="color: #4E9EA7;"><b>200 ₽</b></span> </p>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 6: Картинка справа -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/afisha.jpeg" alt="Котлеты по-киевски">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Котлеты по-киевски</h2>
+                        <div class="product-price">490 ₽ / 0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 7: Картинка cлева -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/blini2.jpeg" alt="Блинчики">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Блинчики</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Блинное тесто</li>
+                            <li><i class="fas fa-check"></i> Творог 9% или Джем</li>
+                            <li><i class="fas fa-check"></i> Сахар / соль</li>
+                            <p>С джемом - <span style="color: #4E9EA7;"><b>190 ₽</b></span> </p>
+                        </ul>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 8: Картинка справа -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/var.jpeg" alt="Вареники">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Вареники</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Тесто</li>
+                            <li><i class="fas fa-check"></i> Картофель</li>
+                            <li><i class="fas fa-check"></i> Лук</li>
+                            <li><i class="fas fa-check"></i> Соль / специи</li>
+                        </ul>
+                        <p>С картофелем и луком - <span style="color: #4E9EA7;"><b>160 ₽</b></span> </p>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 9: Картинка cлева -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/manti.jpeg" alt="Манты">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Манты</h2>
+                        <p>Из свинины и говядины - <span style="color: #4E9EA7;"><b>320 ₽</b></span> </p>
+                        <p>Из говядины - <span style="color: #4E9EA7;"><b>360 ₽</b></span> </p>
+                        <p>Из курицы - <span style="color: #4E9EA7;"><b>280 ₽</b></span> </p>
+                        <div class="product-price"> 0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 10: Картинка справа -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/pelmeni.jpeg" alt="Пельмени">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Пельмени</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Тесто</li>
+                            <li><i class="fas fa-check"></i> Мясо</li>
+                            <li><i class="fas fa-check"></i> Лук</li>
+                            <li><i class="fas fa-check"></i> Соль / специи</li>
+                            <p>Из говядины - <span style="color: #4E9EA7;"><b>380 ₽</b></span> </p>
+                            <p>Из курицы - <span style="color: #4E9EA7;"><b>290 ₽</b></span> </p>
+                            <p>Из свинины и говядины - <span style="color: #4E9EA7;"><b>310 ₽</b></span> </p>
+                        </ul>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 11: Картинка cлева -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/frikadelki.jpeg" alt="Фрикадельки">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Фрикадельки</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Куриное филе</li>
+                            <li><i class="fas fa-check"></i> Репчатый лук</li>
+                            <li><i class="fas fa-check"></i> Соль / специи</li>
+                        </ul>
+                        <div class="product-price">420 ₽ / 0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 12: Картинка справа -->
+                <div class="alternating-block reverse">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/teftelki.jpeg" alt="Тефтели">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Тефтели</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Мясо</li>
+                            <li><i class="fas fa-check"></i> Лук </li>
+                            <li><i class="fas fa-check"></i> Яйцо куриное</li>
+                            <li><i class="fas fa-check"></i> Рис</li>
+                            <li><i class="fas fa-check"></i> Соль / специи</li>
+                            <p>Из говядины - <span style="color: #4E9EA7;"><b>480 ₽</b></span> </p>
+                            <p>Из свинины и говядины - <span style="color: #4E9EA7;"><b>360 ₽</b></span> </p>
+                            <p>Из курицы - <span style="color: #4E9EA7;"><b>340 ₽</b></span> </p>
+
+                        </ul>
+                        <div class="product-price">0.5 кг</div>
+
+                    </div>
+                </div>
+
+                <!-- Блок 13: Картинка cлева -->
+                <div class="alternating-block">
+                    <div class="alternating-image">
+                        <img src="../../img/polufab/golub.jpeg" alt="Голубцы с мясом">
+                    </div>
+                    <div class="alternating-content">
+                        <h2>Голубцы с мясом</h2>
+                        <h4 style="color: #434343;">Состав :</h4>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Говядина</li>
+                            <li><i class="fas fa-check"></i> Свинина</li>
+                            <li><i class="fas fa-check"></i> Молоко</li>
+                            <li><i class="fas fa-check"></i> Рис</li>
+                            <li><i class="fas fa-check"></i> Лук репчатый</li>
+                            <li><i class="fas fa-check"></i> Яйцо куриное</li>
+                            <li><i class="fas fa-check"></i> Соль / перец</li>
+                        </ul>
+                        <div class="product-price">360 ₽ / 0.5 кг</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </section>
+
+        <!-- Футер -->
+        <footer class="footer">
+            <div class="footer-waves">
+                <div class="wave wave-1"></div>
+                <div class="wave wave-2"></div>
+                <div class="wave wave-3"></div>
+            </div>
+
+            <div class="footer-content">
+                <!-- Колонка с логотипом -->
+                <div class="footer-column logo-column">
+                    <img src="../../img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
+                    <p class="footer-motto">С нами всегда попутный ветер!</p>
+                </div>
+
+                <!-- Колонка с контактами -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Контакты</h3>
+                    <ul class="footer-contacts">
+                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
+                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
+                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
+                            12:00 до 00:00</li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с навигацией -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="../../index.html"><i class="fas fa-anchor"></i> Главная</a></li>
+                        <li><a href="../mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
+                        <li><a href="../mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
+                        <li><a href="polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
+                        <li><a href="../banket/bank.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
+                        <li><a href="../besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
+                        <li><a href="../vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
+                        <li><a href="/PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
+                        <li><a href="../brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
+                    </ul>
+                </div>
+
+                <!-- Колонка с соцсетями -->
+                <div class="footer-column social-column">
+                    <h3 class="footer-title">Мы в соцсетях</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="../../img/tg.png"
+                                alt="Telegram" width="55"></a>
+                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                                src="../../img/deliveri1.png" alt="Deliveri" width="55"></a>
+                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
+                            aria-label="Instagram"><img src="../../img/inst.png" alt="Instagram" width="55"></a>
+                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="../../img/vk.png"
+                                alt="VKontakte" width="55"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Нижняя часть футера -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="../../script/script.js"></script>
+    <script>
+        // Дополнительный JavaScript для страницы полуфабрикатов
+        document.addEventListener('DOMContentLoaded', function () {
+            // Анимация появления блоков при прокрутке
+            const alternatingBlocks = document.querySelectorAll('.alternating-block');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            alternatingBlocks.forEach(block => {
+                block.style.opacity = '0';
+                block.style.transform = 'translateY(30px)';
+                block.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(block);
+            });
+
+            // Обработка кликов по кнопкам заказа
+            const orderButtons = document.querySelectorAll('.order-btn');
+            orderButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const productName = this.closest('.alternating-content').querySelector('h2').textContent;
+                    alert(`Спасибо за интерес к "${productName}"! Для заказа позвоните нам по телефону: 8 (987) 634 14-11`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
