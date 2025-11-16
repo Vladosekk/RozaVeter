@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoSlideInterval;
     let startX = 0;
     let endX = 0;
+    let isDragging = false;
     
     // Функция для обновления слайдера
     function updateSlider() {
@@ -34,6 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         updateSlider();
     }
     
+    // Перейти к конкретному слайду
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+        resetAutoSlide();
+    }
+    
     // Обработчики событий для кнопок
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
@@ -41,25 +49,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // Переключение по точкам
     dots.forEach(dot => {
         dot.addEventListener('click', function() {
-            currentSlide = parseInt(this.getAttribute('data-slide'));
-            updateSlider();
-            resetAutoSlide();
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            goToSlide(slideIndex);
         });
     });
     
-    // Обработчики для свайпов на мобильных
+    // Улучшенные обработчики для свайпов на мобильных
     slider.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
+        isDragging = true;
+        clearInterval(autoSlideInterval); // Останавливаем автослайд при касании
+    });
+    
+    slider.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
+        endX = e.touches[0].clientX;
     });
     
     slider.addEventListener('touchend', function(e) {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-    
-    function handleSwipe() {
-        const swipeThreshold = 50;
+        if (!isDragging) return;
+        
         const diff = startX - endX;
+        const swipeThreshold = 50;
         
         if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0) {
@@ -69,9 +80,42 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Свайп вправо - предыдущий слайд
                 prevSlide();
             }
-            resetAutoSlide();
         }
-    }
+        
+        isDragging = false;
+        resetAutoSlide();
+    });
+    
+    // Обработчики для десктопных устройств (drag)
+    slider.addEventListener('mousedown', function(e) {
+        startX = e.clientX;
+        isDragging = true;
+        clearInterval(autoSlideInterval);
+        e.preventDefault();
+    });
+    
+    document.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        endX = e.clientX;
+    });
+    
+    document.addEventListener('mouseup', function(e) {
+        if (!isDragging) return;
+        
+        const diff = startX - endX;
+        const swipeThreshold = 50;
+        
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+        
+        isDragging = false;
+        resetAutoSlide();
+    });
     
     // Функция для автопереключения слайдов
     function startAutoSlide() {
@@ -84,25 +128,33 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoSlide();
     }
     
+    // Пауза автопереключения при наведении (только для десктопов)
+    if (window.matchMedia("(min-width: 769px)").matches) {
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(autoSlideInterval);
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            startAutoSlide();
+        });
+    }
+    
+    // Инициализация слайдера
+    updateSlider();
+    
     // Запуск автопереключения
     startAutoSlide();
     
-    // Остановка автопереключения при наведении на слайдер
-    slider.addEventListener('mouseenter', () => {
-        clearInterval(autoSlideInterval);
+    // Обработка изменения ориентации устройства
+    window.addEventListener('orientationchange', function() {
+        // Перезапускаем слайдер после изменения ориентации
+        setTimeout(() => {
+            updateSlider();
+        }, 300);
     });
     
-    // Возобновление автопереключения при уходе курсора
-    slider.addEventListener('mouseleave', () => {
-        startAutoSlide();
-    });
-    
-    // Адаптация для мобильных - остановка автопереключения при касании
-    slider.addEventListener('touchstart', () => {
-        clearInterval(autoSlideInterval);
-    });
-    
-    slider.addEventListener('touchend', () => {
-        startAutoSlide();
+    // Обработка изменения размера окна
+    window.addEventListener('resize', function() {
+        updateSlider();
     });
 });
