@@ -1,7 +1,7 @@
 // JavaScript для слайдера
 document.addEventListener('DOMContentLoaded', function() {
     const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
+    const slides = document.querySelectorAll('.slidee');
     const prevBtn = document.querySelector('.prev-btn');
     const nextBtn = document.querySelector('.next-btn');
     const dots = document.querySelectorAll('.dot');

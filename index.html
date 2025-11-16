@@ -2,350 +2,794 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Подключение Font Awesome для иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Подключение шрифта Montserrat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/map.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Роза Ветров</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Подключение Font Awesome для иконок -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- Подключение шрифта Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style/map.css" />
+  <link rel="stylesheet" href="style/footer.css" />
+  <link rel="stylesheet" href="style/style.css" />
+  <title>Роза Ветров</title>
 </head>
 
 <body>
-    <!-- Навигационное меню -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <!-- Логотип -->
-            <a href="index.html" class="navbar-logo">
-                <img src="img/logo.png" alt="Логотип Роза Ветров">
+  <!-- Навигационное меню -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Логотип -->
+      <a href="index.html" class="navbar-logo">
+        <img src="img/logo.png" alt="Логотип Роза Ветров" />
+      </a>
+
+      <!-- Бургер-меню для мобильных -->
+      <button class="navbar-toggle" aria-label="Меню">
+        <span class="navbar-toggle-icon"></span>
+        <span class="navbar-toggle-icon"></span>
+        <span class="navbar-toggle-icon"></span>
+      </button>
+
+      <!-- Основное меню -->
+      <div class="navbar-menu">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Главная</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle">
+              Меню <i class="fas fa-chevron-down dropdown-caret"></i>
             </a>
+            <ul class="dropdown-menu" style="list-style: none">
+              <li>
+                <a href="PAGE/mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i> Меню кухни</a>
+              </li>
+              <li>
+                <a href="PAGE/mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню бара</a>
+              </li>
+              <li>
+                <a href="PAGE/polufab/polufab.html" class="dropdown-item"><i class="fas fa-box-open"></i>
+                  Полуфабрикаты</a>
+              </li>
+              <li>
+                <a href="PAGE/banket/bank.html" class="dropdown-item"><i class="fas fa-wine-glass-alt"></i> Банкетное
+                  меню</a>
+              </li>
+            </ul>
+          </li>
 
-            <!-- Бургер-меню для мобильных -->
-            <button class="navbar-toggle" aria-label="Меню">
-                <span class="navbar-toggle-icon"></span>
-                <span class="navbar-toggle-icon"></span>
-                <span class="navbar-toggle-icon"></span>
-            </button>
+          <li class="nav-item">
+            <a href="PAGE/besed/besedki.html" class="nav-link">Беседки</a>
+          </li>
+          <li class="nav-item">
+            <a href="PAGE/vozm/ourt.html" class="nav-link">Наши возможности</a>
+          </li>
+          <li class="nav-item">
+            <a href="PAGE/interior/interior.html" class="nav-link">Наш Интерьер</a>
+          </li>
+          <li class="nav-item">
+            <a href="PAGE/brizo/brizo.html" class="nav-link">Бризо</a>
+          </li>
+        </ul>
 
-            <!-- Основное меню -->
-            <div class="navbar-menu">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle">
-                            Меню <i class="fas fa-chevron-down dropdown-caret"></i>
-                        </a>
-                        <ul class="dropdown-menu" style="list-style: none;">
-                            <li><a href="PAGE/mKit/mKitchen.html" class="dropdown-item"><i class="fas fa-utensils"></i>
-                                    Меню кухни</a></li>
-                            <li><a href="PAGE/mBAR/mBar.html" class="dropdown-item"><i class="fas fa-cocktail"></i> Меню
-                                    бара</a></li>
-                            <li><a href="PAGE/polufab/polufab.html" class="dropdown-item"><i
-                                        class="fas fa-box-open"></i> Полуфабрикаты</a></li>
-                            <li><a href="PAGE/banket/bank.html" class="dropdown-item"><i
-                                        class="fas fa-wine-glass-alt"></i> Банкетное меню</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item"><a href="PAGE/besed/besedki.html" class="nav-link">Беседки</a></li>
-                    <li class="nav-item"><a href="PAGE/vozm/ourt.html" class="nav-link">Наши возможности</a></li>
-                    <li class="nav-item"><a href="PAGE/interior/interior.html" class="nav-link">Наш Интерьер</a></li>
-                    <li class="nav-item"><a href="PAGE/brizo/brizo.html" class="nav-link">Бризо</a></li>
-
-                </ul>
-
-                <!-- Контакты для мобильной версии -->
-                <div class="navbar-contacts-mobile">
-                    <div class="contact-item">
-                        <a href="tel:+79876341411" class="contact-value">
-                            <i class="fas fa-phone contact-icon"></i>
-                            <span class="contact-number">8 (987) 634 14-11</span>
-                        </a>
-                    </div>
-                    <div class="contact-item">
-                        <a href="tel:54-41-41" class="contact-value">
-                            <i class="fas fa-phone contact-icon"></i>
-                            <span class="contact-number">54-41-41</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Контакты для десктопной версии -->
-            <div class="navbar-contacts">
-                <i class="fas fa-phone contact-icon"></i>
-                <div class="contact-numbers">
-                    <span class="contact-number">8 (987) 634 14-11</span>
-                    <span class="contact-number">54-41-41</span>
-                </div>
-            </div>
+        <!-- Контакты для мобильной версии -->
+        <div class="navbar-contacts-mobile">
+          <div class="contact-item">
+            <a href="tel:+79876341411" class="contact-value">
+              <i class="fas fa-phone contact-icon"></i>
+              <span class="contact-number">8 (987) 634 14-11</span>
+            </a>
+          </div>
+          <div class="contact-item">
+            <a href="tel:54-41-41" class="contact-value">
+              <i class="fas fa-phone contact-icon"></i>
+              <span class="contact-number">54-41-41</span>
+            </a>
+          </div>
         </div>
-    </nav>
+      </div>
 
-    <main class="main-content">
-        <!-- Секция приветствия -->
-        <section class="welcome-section" id="home">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
+      <!-- Контакты для десктопной версии -->
+      <div class="navbar-contacts">
+        <i class="fas fa-phone contact-icon"></i>
+        <div class="contact-numbers">
+          <span class="contact-number">8 (987) 634 14-11</span>
+          <span class="contact-number">54-41-41</span>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Декоративные элементы папоротника -->
-            <div class="papor-left">
-                <img src="img/papor-left.png" alt="" class="papor">
+  <main class="main-content">
+    <!-- Секция приветствия -->
+    <section class="welcome-section" id="home">
+      <div class="welcome-container">
+        <!-- Левая часть - контент -->
+        <div class="welcome-content">
+          <div class="restaurant-block">
+            <div class="content">
+              <div class="welcome-text">Добро пожаловать в ресторан</div>
+              <h1 class="restaurant-name"><img src="img/Group.png" alt="Роза Ветров"></h1>
+              <p class="description">На берегу Волги, где лёгкий ветер смешивается с ароматом хвои и вкусом свежих
+                блюд,
+                мы создаём атмосферу, в которую хочется возвращаться снова и снова.
+                Здесь время замедляется, а каждый вечер становится особенным.</p>
+              <p class="descr">С нами всегда попутный ветер —
+                в море вкусов, тепла и запоминающихся моментов.</p>
+              <div class="btns">
+                <a href="#menu" class="book-btn">Посмотреть меню</a>
+                <a href="tel:+79876341411" class="intro-btn secondary">Забронировать столик</a>
+              </div>
             </div>
+          </div>
 
-            <!-- Основной блок приветствия -->
-            <div class="restaurant-block">
-                <div class="content">
-                    <div class="welcome-text">Добро пожаловать в ресторан</div>
-                    <h1 class="restaurant-name"><img src="img/Group.png" alt="Роза Ветров"></h1>
-                    <p class="description">С нами всегда попутный ветер, в море <br> запоминающихся моментов!</p>
-                </div>
+          <!-- Социальные иконки в приветственной секции -->
+          <div class="welcome-social-icons-wrapper">
+            <div class="social-line"></div>
+            <div class="welcome-social-icons">
+              <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="img/tg.png" alt="Telegram"
+                  width="80"></a>
+              <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                  src="img/deliveri1.svg" alt="Deliveri" width="80"></a>
+              <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ==" aria-label="Instagram"><img
+                  src="img/inst.png" alt="Instagram" width="80"></a>
+              <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="img/vk.png" alt="VKontakte"
+                  width="80"></a>
             </div>
+            <div class="social-line"></div>
+          </div>
+        </div>
 
-            <!-- Социальные иконки в приветственной секции -->
-            <div class="welcome-social-icons-wrapper">
-                <div class="social-line"></div>
-                <div class="welcome-social-icons">
-                    <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="img/tg.png" alt="Telegram"
-                            width="80"></a>
-                    <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
-                            src="img/deliveri1.png" alt="Deliveri" width="80"></a>
-                    <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
-                        aria-label="Instagram"><img src="img/inst.png" alt="Instagram" width="80"></a>
-                    <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="img/vk.png" alt="VKontakte"
-                            width="80"></a>
-                </div>
-                <div class="social-line"></div>
+      </div>
+
+      <!-- Округленные бирюзовые волны -->
+      <div class="waves-container">
+        <svg class="waves" viewBox="0 0 2880 400" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <!-- Более округленные волны -->
+            <path id="w1"
+              d="M0,320 C300,280 600,260 900,270 C1200,280 1500,320 1800,330 C2100,340 2400,320 2700,300 L2880,320 L2880,400 L0,400 Z"
+              style="fill: var(--wave-1)" />
+            <path id="w2"
+              d="M0,300 C250,260 500,250 750,260 C1000,270 1250,310 1500,320 C1750,330 2000,310 2250,290 L2880,300 L2880,400 L0,400 Z"
+              style="fill: var(--wave-2)" />
+            <path id="w3"
+              d="M0,280 C200,250 400,240 600,250 C800,260 1000,300 1200,310 C1400,320 1600,300 1800,280 C2000,260 2200,250 2400,260 L2880,280 L2880,400 L0,400 Z"
+              style="fill: var(--wave-3)" />
+            <path id="w4"
+              d="M0,260 C150,240 300,230 450,240 C600,250 750,290 900,300 C1050,310 1200,290 1350,270 C1500,250 1650,240 1800,250 C1950,260 2100,280 2250,290 L2880,260 L2880,400 L0,400 Z"
+              style="fill: var(--wave-4)" />
+            <path id="w5"
+              d="M0,240 C100,220 200,210 300,220 C400,230 500,270 600,280 C700,290 800,270 900,250 C1000,230 1100,220 1200,230 C1300,240 1400,260 1500,270 C1600,280 1700,270 1800,250 C1900,230 2000,220 2100,230 C2200,240 2300,260 2400,270 L2880,240 L2880,400 L0,400 Z"
+              style="fill: var(--wave-5)" />
+          </defs>
+
+          <!-- Слой 1 (самый дальний) -->
+          <g class="wave wave--1">
+            <use href="#w1" x="0" y="0"></use>
+            <use href="#w1" x="2880" y="0"></use>
+          </g>
+
+          <!-- Слой 2 -->
+          <g class="wave wave--2">
+            <use href="#w2" x="0" y="0"></use>
+            <use href="#w2" x="2880" y="0"></use>
+          </g>
+
+          <!-- Слой 3 -->
+          <g class="wave wave--3">
+            <use href="#w3" x="0" y="0"></use>
+            <use href="#w3" x="2880" y="0"></use>
+          </g>
+
+          <!-- Слой 4 -->
+          <g class="wave wave--4">
+            <use href="#w4" x="0" y="0"></use>
+            <use href="#w4" x="2880" y="0"></use>
+          </g>
+
+          <!-- Слой 5 (ближний) -->
+          <g class="wave wave--5">
+            <use href="#w5" x="0" y="0"></use>
+            <use href="#w5" x="2880" y="0"></use>
+          </g>
+        </svg>
+      </div>
+    </section>
+    </section>
+
+    <!-- Секция меню -->
+    <section class="dishes-section" id="menu">
+      <div class="dishes-title-container">
+        <h2 class="dishes-title">Попробуйте нашу изысканую кухню</h2>
+      </div>
+
+      <!-- Контейнер для блюд -->
+      <div class="dishes-container">
+        <div class="dishes-rows-wrapper">
+
+
+          <!-- Первое блюдо -->
+          <div class="dishes-row">
+            <div class="dish-image-block">
+              <img src="img/bluda.png" alt="Морской бриз" class="dish-image" />
             </div>
-
-            <div class="papor-right">
-                <img src="img/papor-right.png" alt="" class="papor">
+            <div class="dish-text-block">
+              <h2 class="dish-name">Авторская кухня с душой и характером</h2>
+              <p class="dish-description">
+                Наш шеф-повар создаёт блюда, вдохновлённые природой Поволжья и
+                лучшими традициями европейской гастрономии. Каждый ингредиент
+                — свежий, сезонный и наполнен вкусом. Мы не просто готовим —
+                мы рассказываем истории в каждом блюде.
+              </p>
+              <div class="dish-buttons">
+                <a href="PAGE/mKit/mKitchen.html" class="order-btn">Посмотреть меню кухни</a>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- Секция меню -->
-        <section class="dishes-section" id="menu">
-            <div class="dishes-title-container">
-                <h2 class="dishes-title">Попробуйте нашу изысканую кухню</h2>
+          <!-- Второе блюдо -->
+          <div class="dishes-row reverse">
+            <div class="dish-image-block">
+              <img src="img/tea.png" alt="Ветреный закат" class="dish-image" />
             </div>
-
-            <!-- Контейнер для блюд -->
-            <div class="dishes-container">
-                <div class="dishes-rows-wrapper">
-                    <!-- Видео-фон -->
-                    <div class="full-height-video">
-                        <video src="video/Clip by @rozavetrov_ul.mp4" loop autoplay muted></video>
-                    </div>
-
-                    <!-- Первое блюдо -->
-                    <div class="dishes-row">
-                        <div class="dish-image-block">
-                            <img src="img/bluda.png" alt="Морской бриз" class="dish-image">
-                        </div>
-                        <div class="dish-text-block">
-                            <h2 class="dish-name">Авторская кухня</h2>
-                            <p class="dish-description">У нас вы найдете авторскую кухню, которая удивит даже самых
-                                изысканных гурманов.</p>
-                            <div class="dish-buttons">
-                                <a href="PAGE/mKit/mKitchen.html" class="dish-btn order-btn">Посмотреть меню кухни</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Второе блюдо -->
-                    <div class="dishes-row reverse">
-                        <div class="dish-image-block">
-                            <img src="img/tea.png" alt="Ветреный закат" class="dish-image">
-                        </div>
-                        <div class="dish-text-block">
-                            <h2 class="dish-name">Разнообразие бара</h2>
-                            <p class="dish-description">Мы рады вам предложить широкий ассортимет алкогольных и
-                                безалкогольных напитков.</p>
-                            <div class="dish-buttons">
-                                <a href="PAGE/mBAR/mBar.html" class="dish-btn order-btn">Посмотреть меню бара</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="dish-text-block">
+              <h2 class="dish-name">Разнообразие бара</h2>
+              <p class="dish-description">
+                Бар, где каждый напиток — как настроение Мы предлагаем
+                коллекцию изысканных вин, авторских коктейлей, домашних
+                настоек и согревающих напитков. Попробуйте ароматный чай из
+                местных трав или бокал вина у камина — и почувствуйте, как
+                вечер становится особенным.
+              </p>
+              <div class="dish-buttons">
+                <a href="PAGE/mBAR/mBar.html" class="order-btn">Посмотреть меню бара</a>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!--  секция "О ресторане" -->
-        <section class="slide_SLIDE" style=" display: flex; align-items: center;">
-            <div class="slider-section">
-                <div class="slider-container">
-                    <div class="slider">
-                        <div class="slide" style="background-image: url('img/sliders/slide1.jpg')">
-                            <div class="slide-text">Авторская кухня <br>
-                                Изысканное меню из сезонных продуктов</div>
-                        </div>
-                        <div class="slide" style="background-image: url('img/sliders/slide2.jpg')">
-                            <div class="slide-text">Элегантный интерьер <br>
-                                Теплая, уютная атмосфера, камин как символ тепла и гостеприимства</div>
-                        </div>
-                        <div class="slide" style="background-image: url('img/sliders/slide3.jpg')">
-                            <div class="slide-text">Летние беседки у реки <br>
-                                Для активного отдыха на свежем воздухе</div>
-                        </div>
-                        <div class="slide" style="background-image: url('img/sliders/slide4.jpg')">
-                            <div class="slide-text">Закрытая летняя веранда <br>
-                                Пространство, объединяющее комфорт интерьера и красоту природы</div>
-                        </div>
-                        <div class="slide" style="background-image: url('img/sliders/slide5.jpg')">
-                            <div class="slide-text">Белоснежный шатер <br>
-                                Главная площадка для ваших грандиозных событий</div>
-                        </div>
-                    </div>
+    <!--  секция "О ресторане" -->
+    <section class="slide_SLIDE" style="display: flex; align-items: center">
+      <div class="slider-section">
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slidee" style="background-image: url('img/sliders/slide1.jpg')">
+              <div class="slide-text">
+                Авторская кухня <br />
+                Изысканное меню из сезонных продуктов
+              </div>
+            </div>
+            <div class="slidee" style="background-image: url('img/sliders/slide2.jpg')">
+              <div class="slide-text">
+                Элегантный интерьер <br />
+                Теплая, уютная атмосфера, камин как символ тепла и
+                гостеприимства
+              </div>
+            </div>
+            <div class="slidee" style="background-image: url('img/sliders/slide3.jpg')">
+              <div class="slide-text">
+                Летние беседки у реки <br />
+                Для активного отдыха на свежем воздухе
+              </div>
+            </div>
+            <div class="slidee" style="background-image: url('img/sliders/slide4.jpg')">
+              <div class="slide-text">
+                Закрытая летняя веранда <br />
+                Пространство, объединяющее комфорт интерьера и красоту природы
+              </div>
+            </div>
+            <div class="slidee" style="background-image: url('img/sliders/slide5.jpg')">
+              <div class="slide-text">
+                Белоснежный шатер <br />
+                Главная площадка для ваших грандиозных событий
+              </div>
+            </div>
+          </div>
 
-                    <div class="slider-controls">
-                        <button class="slider-btn prev-btn">←</button>
-                        <button class="slider-btn next-btn">→</button>
-                    </div>
+          <div class="slider-controls">
+            <button class="slider-btn prev-btn">←</button>
+            <button class="slider-btn next-btn">→</button>
+          </div>
 
-                    <!-- <div class="slider-dots">
+          <!-- <div class="slider-dots">
                     <div class="dot active" data-slide="0"></div>
                     <div class="dot" data-slide="1"></div>
                     <div class="dot" data-slide="2"></div>
                     <div class="dot" data-slide="3"></div>
                     <div class="dot" data-slide="4"></div>
                 </div> -->
-                </div>
+        </div>
 
-                <div class="static-content">
-                    <h2>О ресторане "Роза Ветров"</h2>
-                    <p>Уникальное пространство для отдыха, праздников и бизнеса на природе.</p>
-                    <br>
-                    <p>Приглашаем вас в место, где шум мегаполиса сменяется пением птиц, а городской пейзаж —
-                        бескрайними просторами Волги и вековым лесом. Наш ресторанный комплекс создан для тех, кто ценит
-                        подлинный отдых, высокую кухню и безупречную организацию мероприятий любого масштаба.</p>
+        <div class="static-content">
+          <h2>О ресторане "Роза Ветров"</h2>
+          <p>
+            «Роза Ветров» — это больше, чем ресторан. Это пространство уюта,
+            вкуса и вдохновения. Там, где бескрайние просторы Волги
+            встречаются с теплом камина, а аромат свежих блюд переплетается с
+            шелестом сосен.
+            <br />
+            Мы создали место, где можно укрыться от городской суеты, отметить
+            праздник, провести вечер с близкими или просто насладиться
+            красотой природы.
+            <br />
+            Тёплый свет, вежливый персонал, авторская кухня и забота о каждой
+            детали — всё, чтобы вы чувствовали себя как дома, но чуть лучше.
+          </p>
+        </div>
+      </div>
+    </section>
 
-                </div>
+     <section class="mission">
+        <div class="container">
+            <h1 class="section-title-map">Миссия и Философия</h1>
+            <div class="mission-container">
+                <p class="mission-txt">
+                    <b>Миссия:</b> Создавать пространство, где природа, вкус и эмоции
+                    соединяются в одно. Мы создаем атмосферу гармонии, вдохновения и
+                    тепла, независимо от времени года.
+                </p>
+                <p class="mission-txt">
+                    <b>Философия:</b> «Роза Ветров» — место, куда ведут все дороги. Сюда
+                    приезжают, чтобы вдохнуть свежий воздух Волги и почувствовать вкус
+                    жизни — в каждом блюде, в каждом мгновении. Мы соединяем уют камина
+                    с дыханием реки, элегантность шатра с простотой летней беседки,
+                    изысканное меню с радостью живого общения.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <div class="gallery-wrapper">
+      <div class="gallery-title-container">
+        <h1 class="gallery-main-title">Галерея изображений</h1>
+      </div>
 
-        <section class="map-section" id="contacts">
-            <div class="container">
-                <h2 class="section-title-map">Мы находимся тут!</h2>
-                <div class="map-wrapper">
-                    <div id="restaurant-map" class="map-container"></div>
-                    <div class="map-info">
-                        <div class="info-card">
-                            <h3>Ресторан "Роза-Ветров"</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Ульяновск, п. Рыбацкий, 1 <br> Набережная реки
-                                Волга</p>
-                            <p><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</p>
-                            <p><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
-                                12:00 до 00:00</p>
-                        </div>
+      <div class="gallery-slider-container">
+        <div class="gallery-slider-track">
+          <!-- Первая группа из 17 изображений -->
+          <div class="gallery-slide-group">
+            <div class="gallery-slide-item" data-index="1">
+              <img src="img/slider interior/SN_07764.jpg" alt="Изображение 1" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="2">
+              <img src="img/slider interior/SN_07785.jpg" alt="Изображение 2" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="3">
+              <img src="img/slider interior/SN_07783.jpg" alt="Изображение 3" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="4">
+              <img src="img/slider interior/SN_07784.jpg" alt="Изображение 4" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="5">
+              <img src="img/slider interior/SN_07782.jpg" alt="Изображение 5" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="6">
+              <img src="img/slider interior/SN_07803.jpg" alt="Изображение 6" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="7">
+              <img src="img/slider interior/SN_07793.jpg" alt="Изображение 7" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="8">
+              <img src="img/slider interior/SN_07766.jpg" alt="Изображение 8" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="9">
+              <img src="img/slider interior/SN_07768.jpg" alt="Изображение 9" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="10">
+              <img src="img/slider interior/SN_07770.jpg" alt="Изображение 10" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="11">
+              <img src="img/slider interior/SN_07773.jpg" alt="Изображение 11" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="12">
+              <img src="img/slider interior/SN_07777.jpg" alt="Изображение 12" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="13">
+              <img src="img/slider interior/SN_07808.jpg" alt="Изображение 13" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="14">
+              <img src="img/slider interior/SN_07778.jpg" alt="Изображение 14" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="15">
+              <img src="img/slider interior/SN_07780.jpg" alt="Изображение 15" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="16">
+              <img src="img/slider interior/SN_05659.jpg" alt="Изображение 16" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="17">
+              <img src="img/slider interior/SN_07801.jpg" alt="Изображение 17" class="gallery-slide-img" />
+            </div>
+          </div>
+
+          <!-- Вторая группа из 17 изображений (дубликаты для бесшовной анимации) -->
+          <div class="gallery-slide-group">
+            <div class="gallery-slide-item" data-index="1">
+              <img src="img/slider interior/SN_07764.jpg" alt="Изображение 1" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="2">
+              <img src="img/slider interior/SN_07785.jpg" alt="Изображение 2" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="3">
+              <img src="img/slider interior/SN_07783.jpg" alt="Изображение 3" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="4">
+              <img src="img/slider interior/SN_07784.jpg" alt="Изображение 4" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="5">
+              <img src="img/slider interior/SN_07782.jpg" alt="Изображение 5" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="6">
+              <img src="img/slider interior/SN_07803.jpg" alt="Изображение 6" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="7">
+              <img src="img/slider interior/SN_07793.jpg" alt="Изображение 7" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="8">
+              <img src="img/slider interior/SN_07766.jpg" alt="Изображение 8" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="9">
+              <img src="img/slider interior/SN_07768.jpg" alt="Изображение 9" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="10">
+              <img src="img/slider interior/SN_07770.jpg" alt="Изображение 10" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="11">
+              <img src="img/slider interior/SN_07773.jpg" alt="Изображение 11" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="12">
+              <img src="img/slider interior/SN_07777.jpg" alt="Изображение 12" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="13">
+              <img src="img/slider interior/SN_07808.jpg" alt="Изображение 13" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="14">
+              <img src="img/slider interior/SN_07778.jpg" alt="Изображение 14" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="15">
+              <img src="img/slider interior/SN_07780.jpg" alt="Изображение 15" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="16">
+              <img src="img/slider interior/SN_05659.jpg" alt="Изображение 16" class="gallery-slide-img" />
+            </div>
+            <div class="gallery-slide-item" data-index="17">
+              <img src="img/slider interior/SN_07801.jpg" alt="Изображение 17" class="gallery-slide-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Полноэкранный режим -->
+    <div class="gallery-fullscreen-overlay" id="galleryFullscreenOverlay">
+      <button class="gallery-close-btn" id="galleryCloseBtn">&times;</button>
+      <button class="gallery-nav-btn gallery-prev-btn" id="galleryPrevBtn">
+        &#10094;
+      </button>
+      <button class="gallery-nav-btn gallery-next-btn" id="galleryNextBtn">
+        &#10095;
+      </button>
+      <img class="gallery-fullscreen-image" id="galleryFullscreenImage" src="" alt="Полноэкранное изображение" />
+      <div class="gallery-image-counter" id="galleryImageCounter"></div>
+    </div>
+
+    <section class="map-section" id="contacts">
+      <div class="container">
+        <h2 class="section-title-map">Мы находимся тут!</h2>
+        <div class="map-wrapper">
+          <div id="restaurant-map" class="map-container"></div>
+          <div class="map-info">
+            <div class="info-card">
+              <h3>Ресторан "Роза-Ветров"</h3>
+              <p>
+                <i class="fas fa-map-marker-alt"></i> Ульяновск, п. Рыбацкий,
+                1 <br />
+                Набережная реки Волга
+              </p>
+              <p>
+                <i class="fas fa-phone"></i> 8 (987) 634 14-11 <br />
+                54-41-41
+              </p>
+              <p>
+                <i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br />
+                Пт-сб | 12:00 до 01:00 <br />
+                Вс | 12:00 до 00:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="reviews-section">
+        <div class="reviews-container">
+            <div class="reviews-content">
+                <h2 class="reviews-title">Отзывы наших гостей</h2>
+                <p class="reviews-text">Мы стараемся сделать ваш вечер особенным. Поделитесь, пожалуйста, впечатлениями — ваш отзыв поможет нам становиться лучше и радовать вас снова и снова!</p>
+                
+                <h3 class="reviews-list-title">Понравились ли вам:</h3>
+                <ul class="reviews-list">
+                    <li class="reviews-list-item">Блюда и их подача</li>
+                    <li class="reviews-list-item">Работа официанта</li>
+                    <li class="reviews-list-item">Атмосфера ресторана</li>
+                    <li class="reviews-list-item">Соотношение цена/качество</li>
+                </ul>
+                
+                <a href="https://yandex.ru/maps/org/roza_vetrov/1183422691/reviews/?ll=48.551732%2C54.386132&utm_content=add_review&utm_medium=reviews&utm_source=maps-reviews-widget&z=16" class="reviews-link">Поделитесь вашим честным мнением!</a>
+                
+                <div class="reviews-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">90%</div>
+                        <div>Положительных отзывов</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">25 лет</div>
+                        <div>В ресторанном бизнесе</div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- Футер -->
-        <footer class="footer">
-            <div class="footer-waves">
-                <div class="wave wave-1"></div>
-                <div class="wave wave-2"></div>
-                <div class="wave wave-3"></div>
+            
+            <div class="reviews-widget">
+                <iframe class="reviews-iframe"
+                    src="https://yandex.ru/maps-reviews-widget/1183422691?comments"></iframe>
+                <a href="https://yandex.ru/maps/org/roza_vetrov/1183422691/" target="_blank"
+                    class="reviews-map-link">Роза Ветров на карте Ульяновска — Яндекс Карты</a>
             </div>
+        </div>
+    </section>
 
-            <div class="footer-content">
-                <!-- Колонка с логотипом -->
-                <div class="footer-column logo-column">
-                    <img src="img/logo-footer.png" alt="Роза Ветров" class="footer-logo">
-                    <p class="footer-motto">С нами всегда попутный ветер!</p>
-                </div>
+    <!-- Футер -->
+    <footer class="footer">
+      <div class="footer-waves">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+      </div>
 
-                <!-- Колонка с контактами -->
-                <div class="footer-column">
-                    <h3 class="footer-title">Контакты</h3>
-                    <ul class="footer-contacts">
-                        <li><i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос. Рыбацкий, Заволжский пляж</li>
-                        <li><i class="fas fa-phone"></i> 8 (987) 634 14-11 <br> 54-41-41</li>
-                        <li><i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br> Пт-сб | 12:00 до 01:00 <br> Вс |
-                            12:00 до 00:00</li>
-                    </ul>
-                </div>
+      <div class="footer-content">
+        <!-- Колонка с логотипом -->
+        <div class="footer-column logo-column">
+          <img src="img/logo-footer.png" alt="Роза Ветров" class="footer-logo" />
+          <p class="footer-motto">С нами всегда попутный ветер!</p>
+        </div>
 
-                <!-- Колонка с навигацией -->
-                <div class="footer-column">
-                    <h3 class="footer-title">Навигация</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html"><i class="fas fa-anchor"></i> Главная</a></li>
-                        <li><a href="PAGE/mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a></li>
-                        <li><a href="PAGE/mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a></li>
-                        <li><a href="PAGE/polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a></li>
-                        <li><a href="PAGE/banket/bank.html"><i class="fas fa-crown"></i> Банкетное меню</a></li>
-                        <li><a href="PAGE/besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a></li>
-                        <li><a href="PAGE/vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a></li>
-                        <li><a href="PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a></li>
-                        <li><a href="PAGE/brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a></li>
-                    </ul>
-                </div>
+        <!-- Колонка с контактами -->
+        <div class="footer-column">
+          <h3 class="footer-title">Контакты</h3>
+          <ul class="footer-contacts">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>Г. Ульяновск, Пос.
+              Рыбацкий, Заволжский пляж
+            </li>
+            <li>
+              <i class="fas fa-phone"></i> 8 (987) 634 14-11 <br />
+              54-41-41
+            </li>
+            <li>
+              <i class="fas fa-clock"></i> Пн-Чт | 12:00 до 00:00 <br />
+              Пт-сб | 12:00 до 01:00 <br />
+              Вс | 12:00 до 00:00
+            </li>
+          </ul>
+        </div>
 
-                <!-- Колонка с соцсетями -->
-                <div class="footer-column social-column">
-                    <h3 class="footer-title">Мы в соцсетях</h3>
-                    <div class="social-icons">
-                        <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="img/tg.png" alt="Telegram"
-                                width="55"></a>
-                        <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
-                                src="img/deliveri1.png" alt="Deliveri" width="55"></a>
-                        <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ=="
-                            aria-label="Instagram"><img src="img/inst.png" alt="Instagram" width="55"></a>
-                        <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="img/vk.png"
-                                alt="VKontakte" width="55"></a>
-                    </div>
-                </div>
-            </div>
+        <!-- Колонка с навигацией -->
+        <div class="footer-column">
+          <h3 class="footer-title">Навигация</h3>
+          <ul class="footer-links">
+            <li>
+              <a href="index.html"><i class="fas fa-anchor"></i> Главная</a>
+            </li>
+            <li>
+              <a href="PAGE/mKit/mKitchen.html"><i class="fas fa-utensils"></i>Меню кухни</a>
+            </li>
+            <li>
+              <a href="PAGE/mBAR/mBar.html"><i class="fas fa-cocktail"></i>Меню бара</a>
+            </li>
+            <li>
+              <a href="PAGE/polufab/polufab.html"><i class="fas fa-box-open"></i> Полуфабрикаты</a>
+            </li>
+            <li>
+              <a href="PAGE/banket/bank.html"><i class="fas fa-crown"></i> Банкетное меню</a>
+            </li>
+            <li>
+              <a href="PAGE/besed/besedki.html"><i class="fas fa-info-circle"></i>Беседки</a>
+            </li>
+            <li>
+              <a href="PAGE/vozm/ourt.html"><i class="fas fa-camera"></i>Наши возможности</a>
+            </li>
+            <li>
+              <a href="PAGE/interior/interior.html"><i class="fas fa-couch"></i>Наш Интерьер</a>
+            </li>
+            <li>
+              <a href="PAGE/brizo/brizo.html"><i class="fas fa-calendar-alt"></i>Бризо</a>
+            </li>
+          </ul>
+        </div>
 
-            <!-- Нижняя часть футера -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
-                <p>Разработано с <i class="fas fa-heart"></i> для ценителей хорошей кухни</p>
-            </div>
-        </footer>
-    </main>
-    <script src="script/slider.js"></script>
-    <script src="script/script.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            ymaps.ready(init);
+        <!-- Колонка с соцсетями -->
+        <div class="footer-column social-column">
+          <h3 class="footer-title">Мы в соцсетях</h3>
+          <div class="social-icons">
+            <a href="https://t.me/rozavetrov73" aria-label="Telegram"><img src="img/tg.png" alt="Telegram"
+                width="55" /></a>
+            <a href="https://eda.yandex.ru/restaurant/roza_vetrov_zgcsw" aria-label="Deliveri"><img
+                src="img/deliveri1.svg" alt="Deliveri" width="55" /></a>
+            <a href="https://www.instagram.com/roza_vetrov_ul?igsh=MWJwZnZxMmxsNGU1YQ==" aria-label="Instagram"><img
+                src="img/inst.png" alt="Instagram" width="55" /></a>
+            <a href="https://vk.com/rozavetrov_ul" aria-label="VKontakte"><img src="img/vk.png" alt="VKontakte"
+                width="55" /></a>
+          </div>
+        </div>
+      </div>
 
-            function init() {
-                const restaurantMap = new ymaps.Map('restaurant-map', {
-                    center: [54.386132, 48.551731],
-                    zoom: 16,
-                    controls: ['zoomControl']
-                });
+      <!-- Нижняя часть футера -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 ООО "Вавилон". Все права защищены.</p>
+        <p>
+          Разработано с <i class="fas fa-heart"></i> для ценителей хорошей
+          кухни
+        </p>
+      </div>
+    </footer>
+  </main>
+  <script src="script/slider.js"></script>
+  <script src="script/script.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API_ключ&lang=ru_RU"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      ymaps.ready(init);
 
-                // Добавляем метку
-                const placemark = new ymaps.Placemark([54.386132, 48.551731], {
-                    hintContent: 'Ресторан "Название"',
-                    balloonContent: 'Добро пожаловать в наш ресторан!'
-                }, {
-                    iconLayout: 'default#image',
-                    iconImageHref: 'https://cdn-icons-png.flaticon.com/512/2776/2776067.png',
-                    iconImageSize: [40, 40],
-                    iconImageOffset: [-20, -40]
-                });
-
-                restaurantMap.geoObjects.add(placemark);
-
-                // Добавляем элементы управления
-                restaurantMap.controls.add('zoomControl');
-                restaurantMap.behaviors.disable('scrollZoom');
-            }
+      function init() {
+        const restaurantMap = new ymaps.Map("restaurant-map", {
+          center: [54.386132, 48.551731],
+          zoom: 16,
+          controls: ["zoomControl"],
         });
-    </script>
+
+        // Добавляем метку
+        const placemark = new ymaps.Placemark(
+          [54.386132, 48.551731],
+          {
+            hintContent: 'Ресторан "Роза Ветров"',
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref:
+              "https://cdn-icons-png.flaticon.com/512/2776/2776067.png",
+            iconImageSize: [40, 40],
+            iconImageOffset: [-20, -40],
+          }
+        );
+
+        restaurantMap.geoObjects.add(placemark);
+
+        // Добавляем элементы управления
+        restaurantMap.controls.add("zoomControl");
+        restaurantMap.behaviors.disable("scrollZoom");
+
+        // Обработчик клика по карте
+        restaurantMap.events.add("click", function (e) {
+          // Переход по ссылке при клике на карту
+          window.open(
+            "https://yandex.ru/profile/1183422691?lang=ru",
+            "_blank"
+          );
+        });
+
+        // Обработчик клика по метке (опционально)
+        placemark.events.add("click", function (e) {
+          // Переход по ссылке при клике на метку
+          window.open(
+            "https://yandex.ru/profile/1183422691?lang=ru",
+            "_blank"
+          );
+        });
+      }
+    });
+
+    // Слайдер
+    document.addEventListener("DOMContentLoaded", function () {
+      const slides = document.querySelectorAll(".gallery-slide-item");
+      const fullscreenOverlay = document.getElementById(
+        "galleryFullscreenOverlay"
+      );
+      const fullscreenImage = document.getElementById(
+        "galleryFullscreenImage"
+      );
+      const closeBtn = document.getElementById("galleryCloseBtn");
+      const prevBtn = document.getElementById("galleryPrevBtn");
+      const nextBtn = document.getElementById("galleryNextBtn");
+      const imageCounter = document.getElementById("galleryImageCounter");
+
+      let currentImageIndex = 0;
+      const totalImages = 17;
+
+      // Открытие полноэкранного режима
+      slides.forEach((slide) => {
+        slide.addEventListener("click", function () {
+          // Берем индекс только из первой группы изображений
+          const imageIndex = parseInt(this.getAttribute("data-index")) - 1;
+          currentImageIndex = imageIndex;
+          openFullscreen(imageIndex);
+        });
+      });
+
+      // Закрытие полноэкранного режима
+      closeBtn.addEventListener("click", closeFullscreen);
+
+      // Навигация в полноэкранном режиме
+      prevBtn.addEventListener("click", () => navigateFullscreen(-1));
+      nextBtn.addEventListener("click", () => navigateFullscreen(1));
+
+      // Закрытие по клику на оверлей
+      fullscreenOverlay.addEventListener("click", function (e) {
+        if (e.target === fullscreenOverlay) {
+          closeFullscreen();
+        }
+      });
+
+      // Закрытие по клавише Escape
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeFullscreen();
+        }
+
+        // Навигация стрелками в полноэкранном режиме
+        if (fullscreenOverlay.style.display === "flex") {
+          if (e.key === "ArrowLeft") {
+            navigateFullscreen(-1);
+          } else if (e.key === "ArrowRight") {
+            navigateFullscreen(1);
+          }
+        }
+      });
+
+      // Функции
+      function openFullscreen(index) {
+        // Берем URL из первого слайда с таким индексом
+        const imageUrl = document.querySelector(
+          `.gallery-slide-item[data-index="${index + 1}"] .gallery-slide-img`
+        ).src;
+        fullscreenImage.src = imageUrl;
+        updateImageCounter(index);
+        fullscreenOverlay.style.display = "flex";
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeFullscreen() {
+        fullscreenOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+
+      function navigateFullscreen(direction) {
+        currentImageIndex += direction;
+
+        if (currentImageIndex < 0) {
+          currentImageIndex = totalImages - 1;
+        } else if (currentImageIndex >= totalImages) {
+          currentImageIndex = 0;
+        }
+
+        const imageUrl = document.querySelector(
+          `.gallery-slide-item[data-index="${currentImageIndex + 1
+          }"] .gallery-slide-img`
+        ).src;
+        fullscreenImage.src = imageUrl;
+        updateImageCounter(currentImageIndex);
+      }
+
+      function updateImageCounter(index) {
+        imageCounter.textContent = `${index + 1} / ${totalImages}`;
+      }
+    });
+  </script>
 </body>
 
 </html>
