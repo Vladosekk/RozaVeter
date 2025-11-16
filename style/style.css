@@ -1890,7 +1890,112 @@ body {
         padding: 20px 0;
     }
 }
+@media (max-width: 768px) {
+    .slide_SLIDE {
+        padding: 10px 0;
+        margin-top: 0;
+    }
 
+    .slider-section {
+        flex-direction: column;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .slider-container {
+        min-height: 300px;
+        order: -1;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .slidee {
+        min-height: 300px;
+    }
+
+    .slide-text {
+        bottom: 15px;
+        left: 15px;
+        padding: 10px 15px;
+        font-size: 14px;
+        max-width: 80%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .static-content {
+        padding: 20px 15px;
+    }
+
+    .static-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .static-content p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .slider-controls {
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Улучшенная поддержка свайпов */
+    .slider {
+        touch-action: pan-y pinch-zoom;
+    }
+
+    .slidee {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        min-height: 250px;
+    }
+
+    .slidee {
+        min-height: 250px;
+    }
+
+    .slide-text {
+        font-size: 12px;
+        padding: 8px 12px;
+        max-width: 85%;
+    }
+
+    .static-content {
+        padding: 15px 10px;
+    }
+
+    .static-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .static-content p {
+        font-size: 0.8rem;
+    }
+
+    .slider-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
 /* Адаптация для средних планшетов (880px - 769px) */
 @media (max-width: 880px) and (min-width: 769px) {
     .slider-container {
@@ -2005,6 +2110,36 @@ body {
     .static-content p {
         font-size: 0.8rem;
     }
+}
+
+
+/* Улучшение отзывчивости для мобильных */
+.slider-container {
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.slider {
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Предотвращение выделения текста при свайпе */
+.slider-container {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Улучшение видимости кнопок на мобильных */
+.slider-btn {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn:active {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(0.95);
 }
 
 /* ======================== */
