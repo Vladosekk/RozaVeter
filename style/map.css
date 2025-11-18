@@ -17,14 +17,14 @@
     margin-bottom: 40px;
     position: relative;
     padding-bottom: 15px;
-    left: -33%;
+    left: -30%;
 }
 
 .section-title-map::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 39.2%;
+    left: 36.9%;
     transform: translateX(-50%);
     width: 150px;
     height: 3px;
@@ -106,13 +106,13 @@
     .section-title-map {
         font-size: 2.2rem;
         margin-bottom: 30px;
-        margin-left: 15%;
+        margin-left: 30%;
     }
 
     .section-title-map::after {
         width: 180px;
         height: 3px;
-        padding-right: 6%;
+        padding-right: 27%;
     }
 }
 

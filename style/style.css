@@ -44,7 +44,7 @@ body {
     }
 
     .section-title-map::after {
-        left: 50%;
+        left: 45%;
         transform: translateX(-50%);
     }
 
@@ -1368,7 +1368,7 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 12%;
+    left: 10.5%;
     transform: translateX(-50%);
     width: 200px;
     height: 3px;
@@ -7244,7 +7244,7 @@ a.contact-value:hover {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
