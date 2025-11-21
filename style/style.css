@@ -35,19 +35,6 @@ body {
         width: 100%;
         overflow-x: hidden;
     }
-
-    /* Исправление для секции карты */
-    .section-title-map {
-        left: 0;
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .section-title-map::after {
-        left: 45%;
-        transform: translateX(-50%);
-    }
-
     /* Исправление для других элементов */
     .container,
     .about-container,
@@ -1236,11 +1223,6 @@ body {
 
     .welcome-container {
         gap: 40px;
-        padding-bottom: 15vh;
-    }
-
-    .welcome-content {
-        gap: 30px;
     }
 
     .welcome-title {
@@ -1368,9 +1350,9 @@ body {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 10.5%;
+    left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 250px;
     height: 3px;
     background-color: #5D8BF4;
 }
@@ -1539,7 +1521,7 @@ body {
     }
 
     .dishes-title::after {
-        left: 12%;
+        left: 50%;
         width: 200px;
         height: 3px;
     }
@@ -1582,7 +1564,7 @@ body {
     }
 
     .dishes-title::after {
-        left: 20%;
+        left: 50%;
         width: 200px;
         height: 3px;
     }
@@ -1612,7 +1594,7 @@ body {
     }
 
     .dishes-title::after {
-        left: 20%;
+        left: 50%;
         width: 200px;
         height: 3px;
     }
@@ -2058,8 +2040,8 @@ body {
     }
 
     .slider-controls {
-        bottom: 15px;
-        right: 15px;
+        bottom: 5px;
+        right: 5px;
     }
 
     .slider-btn {
@@ -2104,11 +2086,12 @@ body {
     }
 
     .static-content h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .static-content p {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        text-align: justify;
     }
 }
 
@@ -4555,9 +4538,9 @@ body {
 
     .intro-btn {
         width: 100%;
-        max-width: 280px;
+        max-width: 220px;
         padding: 12px 25px;
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
 }
 
@@ -6698,9 +6681,10 @@ a.contact-value:hover {
 
 .gallery-main-title {
     font-size: 2.5rem;
-    color: #333;
+    color: #434343;
     margin-bottom: 20px;
 }
+
 
 /* Стили для слайдера */
 .gallery-slider-container {
@@ -6975,7 +6959,7 @@ a.contact-value:hover {
     }
 
     .gallery-main-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .gallery-nav-btn {

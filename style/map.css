@@ -17,14 +17,35 @@
     margin-bottom: 40px;
     position: relative;
     padding-bottom: 15px;
-    left: -30%;
+    left: 0;
 }
 
 .section-title-map::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 36.9%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background-color: #5D8BF4;
+}
+
+.section-title-map-two {
+    font-size: 2.5rem;
+    color: #434343;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    left: 0;
+}
+
+.section-title-map-two::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
     transform: translateX(-50%);
     width: 150px;
     height: 3px;
@@ -82,13 +103,14 @@
 
 /* Адаптация для мобильных */
 @media (max-width: 1200px) {
-    .section-title-map {
+    .section-title-map,
+    .section-title-map-two {
         font-size: 2.2rem;
         margin-bottom: 30px;
-        margin-left: 15%;
     }
 
-    .section-title-map::after {
+    .section-title-map::after,
+    .section-title-map-two::after {
         width: 180px;
         height: 3px;
     }
@@ -106,13 +128,18 @@
     .section-title-map {
         font-size: 2.2rem;
         margin-bottom: 30px;
-        margin-left: 30%;
+        margin-left: 0;
     }
 
     .section-title-map::after {
         width: 180px;
         height: 3px;
-        padding-right: 27%;
+        padding-right: 0%;
+    }
+
+    .section-title-map-two {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
     }
 }
 
@@ -124,13 +151,18 @@
     .section-title-map {
         font-size: 1.6rem;
         padding-bottom: 10px;
-        margin-left: 60%;
+        margin-left: 0;
     }
 
     .section-title-map::after {
         width: 180px;
         height: 2px;
-        margin-left: 10%;
+        margin-left: 0;
+    }
+
+    .section-title-map-two {
+        font-size: 1.6rem;
+        padding-bottom: 10px;
     }
 }
 
@@ -148,14 +180,19 @@
     }
 
     .section-title-map {
-        font-size: 1.2rem;
+        font-size: 2rem;
         margin-bottom: 25px;
-        margin-left: 65%;
+        margin-left: 0;
     }
 
     .section-title-map::after {
         width: 160px;
         height: 2px;
-        margin-left: 19px;
+        margin-left: 0;
+    }
+
+    .section-title-map-two {
+        font-size: 2rem;
+        margin-bottom: 25px;
     }
 }
